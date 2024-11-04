@@ -1,46 +1,35 @@
-package com.example.rainbowdish
+package com.example.mydatabaseapp
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.rainbowdish.ui.theme.RainbowDishTheme
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mydatabaseapp.dao.ProductDAO
+import com.example.mydatabaseapp.models.Product
+import com.example.rainbowdish.R
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private lateinit var productDAO: ProductDAO
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            RainbowDishTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+        setContentView(R.layout.activity_main)
+
+        productDAO = ProductDAO(this)
+
+        // Пример добавления продукта
+        val newProduct = Product(
+            productName = "Apple",
+            kcal = 52.0,
+            protein = 0.3,
+            fat = 0.2,
+            carbohydrates = 14.0
+        )
+        productDAO.addProduct(newProduct)
+
+        // Получение всех продуктов
+        val products = productDAO.getAllProducts()
+        for (product in products) {
+            Toast.makeText(this, "Product: ${product.productName}", Toast.LENGTH_SHORT).show()
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RainbowDishTheme {
-        Greeting("Android")
     }
 }
