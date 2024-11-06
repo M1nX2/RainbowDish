@@ -1,3 +1,26 @@
 <resources>
+    <!-- Название приложения -->
     <string name="app_name">Rainbow Dish</string>
+
+    <!-- Названия и сообщения -->
+    <string name="welcome_message">Добро пожаловать в Rainbow Dish!</string>
+    <string name="add_product">Добавить продукт</string>
+    <string name="view_products">Посмотреть продукты</string>
+    <string name="product_added">Продукт добавлен успешно!</string>
+    <string name="product_name">Название продукта:</string>
+    <string name="product_kcal">Калории:</string>
+    <string name="product_protein">Белок:</string>
+    <string name="product_fat">Жиры:</string>
+    <string name="product_carbohydrates">Углеводы:</string>
+
+    <!-- Ошибки и уведомления -->
+    <string name="error_empty_product_name">Имя продукта не может быть пустым!</string>
+    <string name="error_product_not_found">Продукт не найден!</string>
+
+    <!-- Кнопки -->
+    <string name="button_add">Добавить</string>
+    <string name="button_view">Просмотреть</string>
+
+    <!-- Остальные настройки -->
+    <string name="hello_world">Hello World!</string>
 </resources>

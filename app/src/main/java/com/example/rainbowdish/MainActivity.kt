@@ -1,4 +1,5 @@
-package com.example.mydatabaseapp
+//package com.example.mydatabaseapp
+package com.example.rainbowdish
 
 import android.os.Bundle
 import android.widget.Toast
