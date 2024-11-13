@@ -20,16 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         productDAO = ProductDAO(this)
 
-        // Пример добавления продукта
-        val newProduct = Product(
-            productName = "Apple",
-            kcal = 52.0,
-            protein = 0.3,
-            fat = 0.2,
-            carbohydrates = 14.0
-        )
-        productDAO.addProduct(newProduct)
-
         // Получение всех продуктов
         val products = productDAO.getAllProducts()
         for (product in products) {

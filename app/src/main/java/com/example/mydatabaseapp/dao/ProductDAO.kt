@@ -9,45 +9,6 @@ import com.example.mydatabaseapp.models.Product
 
 class ProductDAO(context: Context) {
     private val dbHelper = DatabaseHelper(context)
-
-    // Добавление продукта в базу данных
-    fun addProduct(product: Product) {
-        val db = dbHelper.writableDatabase
-        val values = ContentValues().apply {
-            put("Product_Name", product.productName)
-            put("Kcal", product.kcal)
-            put("Protein", product.protein)
-            put("Fat", product.fat)
-            put("Carbonhydrates", product.carbohydrates)
-            put("VitA", product.vitA)
-            put("VitB1", product.vitB1)
-            put("VitB2", product.vitB2)
-            put("VitB3", product.vitB3)
-            put("VitB5", product.vitB5)
-            put("VitB6", product.vitB6)
-            put("VitB7", product.vitB7)
-            put("VitB9", product.vitB9)
-            put("VitB12", product.vitB12)
-            put("VitC", product.vitC)
-            put("VitD", product.vitD)
-            put("VitE", product.vitE)
-            put("VitK", product.vitK)
-            put("K", product.k)
-            put("Ca", product.ca)
-            put("Mg", product.mg)
-            put("P", product.p)
-            put("Fe", product.fe)
-            put("I", product.i)
-            put("Zn", product.zn)
-            put("F", product.f)
-            put("AVGWeight", product.avgWeight)
-            put("ProductIMG", product.productImg)
-        }
-
-        db.insert("Product", null, values)
-        db.close()
-    }
-
     // Получение всех продуктов из базы данных
     fun getAllProducts(): List<Product> {
         val products = mutableListOf<Product>()
