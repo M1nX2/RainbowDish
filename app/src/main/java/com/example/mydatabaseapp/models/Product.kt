@@ -28,6 +28,6 @@ data class Product(
     var i: Double = 0.0,
     var zn: Double = 0.0,
     var f: Double = 0.0,
-    var avgWeight: Double = 0.0,
+    var avgWeight: Double? = null,
     var productImg: String? = null
 )

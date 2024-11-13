@@ -1,15 +1,17 @@
 package com.example.mydatabaseapp.dao
 
-import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
-import android.database.sqlite.SQLiteDatabase
 import com.example.mydatabaseapp.DatabaseHelper
 import com.example.mydatabaseapp.models.Product
+import com.example.mydatabaseapp.models.Recipe
+import com.example.mydatabaseapp.models.RecipeProduct
+import com.example.mydatabaseapp.models.Record
 
-class ProductDAO(context: Context) {
+class DatabaseDAO(context: Context) {
     private val dbHelper = DatabaseHelper(context)
-    // Получение всех продуктов из базы данных
+
+    // Получение всех продуктов из таблицы Product
     fun getAllProducts(): List<Product> {
         val products = mutableListOf<Product>()
         val db = dbHelper.readableDatabase
@@ -18,35 +20,35 @@ class ProductDAO(context: Context) {
         if (cursor.moveToFirst()) {
             do {
                 val product = Product(
-                    idProduct = cursor.getInt(0),
-                    productName = cursor.getString(1),
-                    kcal = cursor.getDouble(2),
-                    protein = cursor.getDouble(3),
-                    fat = cursor.getDouble(4),
-                    carbohydrates = cursor.getDouble(5),
-                    vitA = cursor.getDouble(6),
-                    vitB1 = cursor.getDouble(7),
-                    vitB2 = cursor.getDouble(8),
-                    vitB3 = cursor.getDouble(9),
-                    vitB5 = cursor.getDouble(10),
-                    vitB6 = cursor.getDouble(11),
-                    vitB7 = cursor.getDouble(12),
-                    vitB9 = cursor.getDouble(13),
-                    vitB12 = cursor.getDouble(14),
-                    vitC = cursor.getDouble(15),
-                    vitD = cursor.getDouble(16),
-                    vitE = cursor.getDouble(17),
-                    vitK = cursor.getDouble(18),
-                    k = cursor.getDouble(19),
-                    ca = cursor.getDouble(20),
-                    mg = cursor.getDouble(21),
-                    p = cursor.getDouble(22),
-                    fe = cursor.getDouble(23),
-                    i = cursor.getDouble(24),
-                    zn = cursor.getDouble(25),
-                    f = cursor.getDouble(26),
-                    avgWeight = cursor.getDouble(27),
-                    productImg = cursor.getString(28) // Заметьте, что мы добавили productImg
+                    idProduct = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Product")),
+                    productName = cursor.getString(cursor.getColumnIndexOrThrow("Product_Name")),
+                    kcal = cursor.getDouble(cursor.getColumnIndexOrThrow("Kcal")),
+                    protein = cursor.getDouble(cursor.getColumnIndexOrThrow("Protein")),
+                    fat = cursor.getDouble(cursor.getColumnIndexOrThrow("Fat")),
+                    carbohydrates = cursor.getDouble(cursor.getColumnIndexOrThrow("Carbonhydrates")),
+                    vitA = cursor.getDouble(cursor.getColumnIndexOrThrow("VitA")),
+                    vitB1 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB1")),
+                    vitB2 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB2")),
+                    vitB3 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB3")),
+                    vitB5 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB5")),
+                    vitB6 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB6")),
+                    vitB7 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB7")),
+                    vitB9 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB9")),
+                    vitB12 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB12")),
+                    vitC = cursor.getDouble(cursor.getColumnIndexOrThrow("VitC")),
+                    vitD = cursor.getDouble(cursor.getColumnIndexOrThrow("VitD")),
+                    vitE = cursor.getDouble(cursor.getColumnIndexOrThrow("VitE")),
+                    vitK = cursor.getDouble(cursor.getColumnIndexOrThrow("VitK")),
+                    k = cursor.getDouble(cursor.getColumnIndexOrThrow("K")),
+                    ca = cursor.getDouble(cursor.getColumnIndexOrThrow("Ca")),
+                    mg = cursor.getDouble(cursor.getColumnIndexOrThrow("Mg")),
+                    p = cursor.getDouble(cursor.getColumnIndexOrThrow("P")),
+                    fe = cursor.getDouble(cursor.getColumnIndexOrThrow("Fe")),
+                    i = cursor.getDouble(cursor.getColumnIndexOrThrow("I")),
+                    zn = cursor.getDouble(cursor.getColumnIndexOrThrow("Zn")),
+                    f = cursor.getDouble(cursor.getColumnIndexOrThrow("F")),
+                    avgWeight = cursor.getDouble(cursor.getColumnIndexOrThrow("AVGWeight")),
+                    productImg = cursor.getString(cursor.getColumnIndexOrThrow("ProductIMG"))
                 )
                 products.add(product)
             } while (cursor.moveToNext())
@@ -54,5 +56,74 @@ class ProductDAO(context: Context) {
         cursor.close()
         db.close()
         return products
+    }
+
+    // Получение всех рецептов из таблицы Recipe
+    fun getAllRecipes(): List<Recipe> {
+        val recipes = mutableListOf<Recipe>()
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Recipe", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val recipe = Recipe(
+                    idRecipe = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Pecipe")),
+                    nameR = cursor.getString(cursor.getColumnIndexOrThrow("Name_R")),
+                    timeR = cursor.getString(cursor.getColumnIndexOrThrow("Time_R")),  // может быть null
+                    descR = cursor.getString(cursor.getColumnIndexOrThrow("Desc_R")),
+                    weight = cursor.getDouble(cursor.getColumnIndexOrThrow("Weight")),
+                    portions = cursor.getInt(cursor.getColumnIndexOrThrow("Portions"))
+                )
+                recipes.add(recipe)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return recipes
+    }
+
+
+    // Получение всех записей из таблицы Recipe_Product
+    fun getAllRecipeProducts(): List<RecipeProduct> {
+        val recipeProducts = mutableListOf<RecipeProduct>()
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Recipe_Product", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val recipeProduct = RecipeProduct(
+                    idRecipeProduct = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Recipe_Product")),
+                    recipeId = cursor.getInt(cursor.getColumnIndexOrThrow("Recipe_ID")),
+                    productId = cursor.getInt(cursor.getColumnIndexOrThrow("Product_ID")),
+                    quantity = cursor.getDouble(cursor.getColumnIndexOrThrow("Quantity"))
+                )
+                recipeProducts.add(recipeProduct)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return recipeProducts
+    }
+
+    // Получение всех записей из таблицы Record
+    fun getAllRecords(): List<Record> {
+        val records = mutableListOf<Record>()
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Record", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val record = Record(
+                    idRecord = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Record")),
+                    date = cursor.getString(cursor.getColumnIndexOrThrow("Date")),
+                    productId = cursor.getInt(cursor.getColumnIndexOrThrow("Product_ID")),
+                    quantity = cursor.getDouble(cursor.getColumnIndexOrThrow("Quantity"))
+                )
+                records.add(record)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return records
     }
 }
