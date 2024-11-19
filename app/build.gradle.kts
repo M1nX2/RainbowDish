@@ -65,6 +65,9 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0") // Зависимость для работы с Room
     kapt("androidx.room:room-compiler:2.5.0") // Компилятор аннотаций для Room
 
+    implementation("com.github.bumptech.glide:glide:4.15.1") // Замените на актуальную версию, если появилась новая
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
+
     // Зависимости для тестирования
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
