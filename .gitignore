@@ -1,3 +1,5 @@
+# Игнорируем файлы и папки, связанные с Android Studio и Gradle
+
 *.iml
 .gradle
 /local.properties
@@ -7,11 +9,18 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# Игнорируем системные файлы
 .DS_Store
+
+# Игнорируем директории сборки и другие временные файлы
 /build
 /captures
 .externalNativeBuild
 .cxx
+
+# Локальные свойства проекта
 local.properties
 
-app\src\main\assets\secrets.txt
+# Игнорируем файл secrets.txt в папке assets
+app/src/main/assets/secrets.txt
