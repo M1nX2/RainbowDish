@@ -16,9 +16,5 @@ class ProductAdd: AppCompatActivity() {
         Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.rrg39ozowad))
         Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.ri6428c11o6))
         Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.rn1hvgpnv7bd))
-        Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.r4j8f09qg45c))
-        Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.rjhwiadsa12h))
-        Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.r92ylo48tekt))
-        Glide.with(this).load("https://i.imgur.com/1tMFzp8.png").into(findViewById(R.id.rfillgkcvswb))
     }
 }

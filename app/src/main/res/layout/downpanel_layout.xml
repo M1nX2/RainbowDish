@@ -26,7 +26,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src=""
+                android:src="@drawable/parametrs_vibr"
                 android:contentDescription="Параметры" />
 
             <TextView
@@ -47,7 +47,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src=""
+                android:src="@drawable/produkti"
                 android:contentDescription="Продукты" />
 
             <TextView
@@ -68,7 +68,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src=""
+                android:src="@drawable/statistika"
                 android:contentDescription="Статистика" />
 
             <TextView
@@ -89,7 +89,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src=""
+                android:src="@drawable/recepti"
                 android:contentDescription="Рецепты" />
 
             <TextView
