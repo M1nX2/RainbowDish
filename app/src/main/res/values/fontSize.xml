@@ -15,4 +15,5 @@
     <dimen name="fontsize_display_small">36sp</dimen>
     <dimen name="fontsize_display_medium">45sp</dimen>
     <dimen name="fontsize_display_large">57sp</dimen>
+
 </resources>

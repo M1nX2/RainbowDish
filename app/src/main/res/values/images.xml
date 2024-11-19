@@ -69,29 +69,9 @@
     <string name="images_navigate_next" translatable="false">https://i.imgur.com/C5wkxrA.png</string>
     <string name="images_notifications" translatable="false">https://i.imgur.com/TcbkXfj.png</string>
     <string name="images_outbox" translatable="false">https://i.imgur.com/uGRdsXR.png</string>
-    <string name="images_pause" translatable="false">https://i.imgur.com/UHh4d33.png</string>
-    <string name="images_person" translatable="false">https://i.imgur.com/TBBXXZM.png</string>
-    <string name="images_photo" translatable="false">https://i.imgur.com/6Rq5x1i.png</string>
-    <string name="images_play_arrow" translatable="false">https://i.imgur.com/kl6kFCl.png</string>
-    <string name="images_play_arrow_filled" translatable="false">https://i.imgur.com/0VTtQ4p.png</string>
-    <string name="images_radio_button_checked" translatable="false">https://i.imgur.com/k0b3doh.png</string>
-    <string name="images_radio_button_unchecked" translatable="false">https://i.imgur.com/8EOiYTh.png</string>
-    <string name="images_redo" translatable="false">https://i.imgur.com/OL7tIQg.png</string>
-    <string name="images_reply" translatable="false">https://i.imgur.com/bdtOYHo.png</string>
-    <string name="images_report" translatable="false">https://i.imgur.com/7WqMi7X.png</string>
-    <string name="images_search" translatable="false">https://i.imgur.com/UKR4tYJ.png</string>
-    <string name="images_settings" translatable="false">https://i.imgur.com/8v5DqNs.png</string>
-    <string name="images_share" translatable="false">https://i.imgur.com/XWueI52.png</string>
-    <string name="images_star" translatable="false">https://i.imgur.com/qOfML1W.png</string>
-    <string name="images_star_filled" translatable="false">https://i.imgur.com/jiZpOPg.png</string>
-    <string name="images_stop" translatable="false">https://i.imgur.com/h2WvYah.png</string>
-    <string name="images_stop_filled" translatable="false">https://i.imgur.com/9vg7Cqg.png</string>
-    <string name="images_text_format" translatable="false">https://i.imgur.com/rT4GTli.png</string>
-    <string name="images_thumb_up" translatable="false">https://i.imgur.com/NUh9gRk.png</string>
-    <string name="images_thumb_up_filled" translatable="false">https://i.imgur.com/NkDGGjH.png</string>
-    <string name="images_thumbs_up_down" translatable="false">https://i.imgur.com/Z3JnvL9.png</string>
-    <string name="images_trash" translatable="false">https://i.imgur.com/B0kqgi7.png</string>
-    <string name="images_upload" translatable="false">https://i.imgur.com/ZMsCGCt.png</string>
-    <string name="images_warning" translatable="false">https://i.imgur.com/RE5pm4k.png</string>
-    <string name="images_wifi" translatable="false">https://i.imgur.com/jN3S2rA.png</string>
+    <string name="images_pause" translatable="false">https://i.imgur.com/UHh8lC8.png</string>
+    <string name="images_pause_circle" translatable="false">https://i.imgur.com/1q5u23N.png</string>
+    <string name="images_pause_circle_filled" translatable="false">https://i.imgur.com/BAmZ9gu.png</string>
+    <string name="images_photo" translatable="false">https://i.imgur.com/lbOBbO8.png</string>
+    <string name="images_photo_camera" translatable="false">https://i.imgur.com/RRAquPH.png</string>
 </resources>

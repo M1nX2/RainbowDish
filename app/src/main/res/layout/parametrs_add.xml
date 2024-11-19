@@ -1,0 +1,368 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/surfaceContainerLowest"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:id="@+id/rhu06ko6rgh9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FAFAEE">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/r421mnt93kb2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/r1nqhzcv91ms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/s5e27fdsw1bb0cc77"
+                        android:paddingBottom="11dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rnw96hzwnkfp"
+                            android:layout_width="56dp"
+                            android:layout_height="105dp"
+                            android:layout_marginEnd="50dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/r54fwfaztdpb"
+                            android:textColor="#1A1C15"
+                            android:textSize="@dimen/fontsize_headline_medium"
+                            android:layout_marginTop="41dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:text="Параметры" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/rl3icz3b39dr"
+                    app:shapeAppearanceOverlay="@style/cr3"
+                    android:layout_width="158dp"
+                    android:layout_height="59dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="-33dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/rbojyu4ohlk5"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_marginBottom="-13dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Введите параметры для расчёта рекомендаций " />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rvdjyxjag7bm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="#E9E9DD"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ryeesbnhdzni"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rer83egv3kgd"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_small"
+                        android:layout_marginBottom="6dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Рост" />
+
+                    <TextView
+                        android:id="@+id/rrfrdxgclrcj"
+                        android:textColor="@color/onSurfaceVariant"
+                        android:textSize="@dimen/fontsize_body_large"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Введите рост, см" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rkh7f1gp1t3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rsujg6sbzt49"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#414439"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/r2vwtjp1gep9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="#E9E9DD"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rezb8pqfuv6u"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/r7hxijtypyqi"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_small"
+                        android:layout_marginBottom="6dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Вес" />
+
+                    <TextView
+                        android:id="@+id/rxbmywl79ew"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_large"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Введите вес, кг" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/re3f727n404p"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rol10at97aof"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#414439"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/rddqrw8kzd2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="#E9E9DD"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="17dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rg7xlai28oss"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/r16h8ac8c5c9"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_small"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Пол" />
+
+                    <TextView
+                        android:id="@+id/r71e82nu0ko6"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_large"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Выберите пол" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rfgxs5pkc89"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rgu5g298ug94"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#414439"
+                android:layout_marginBottom="15dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/r9yjbcvfksr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="#E9E9DD"
+                android:paddingVertical="12dp"
+                android:paddingHorizontal="17dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rhd2ak4uyij5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/rtppee8rr9be"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_small"
+                        android:layout_marginBottom="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Цель" />
+
+                    <TextView
+                        android:id="@+id/rsly6kwhh4do"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_large"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:text="Выберите цель" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/r94nuvv00u1o"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rkrmiuejh3ms"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#414439"
+                android:layout_marginBottom="23dp"
+                android:layout_marginHorizontal="75dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/r7rvo9p07tm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:background="@drawable/cr100b36490d"
+                android:paddingVertical="16dp"
+                android:layout_marginBottom="78dp"
+                android:layout_marginHorizontal="95dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rsy7mktg16x"
+                    android:textColor="@color/surfaceContainerLowest"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Рассчитать норму" />
+
+            </LinearLayout>
+
+            <!-- Add the rest of your layout content here -->
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/downpanel_layout"/>
+</LinearLayout>

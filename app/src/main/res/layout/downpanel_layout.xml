@@ -1,0 +1,126 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rwdejvviuun"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#E3E3D8"
+    android:paddingVertical="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Вложенные элементы -->
+    <LinearLayout
+        android:id="@+id/r2hc65iiqn84"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/r4j8f09qg45c"
+            android:layout_width="16dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="48dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <LinearLayout
+            android:id="@+id/rhurf3u3kpmr"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/cr16b70785d"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp">
+
+            <ImageView
+                android:id="@+id/rjhwiadsa12h"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rsb1o1knbmhb"
+            android:layout_width="38dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/r92ylo48tekt"
+                android:layout_width="12dp"
+                android:layout_height="16dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/rfillgkcvswb"
+            android:layout_width="17dp"
+            android:layout_height="16dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rns8ma3oji1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/rk7ej4gtxqg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Параметры"
+            android:textColor="#414439"
+            android:textSize="@dimen/fontsize_body_small" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/rhvdlr3amkwf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Продукты"
+            android:textColor="#1A1C15"
+            android:textSize="@dimen/fontsize_body_small" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/rmf6mt5mtza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Статистика"
+            android:textColor="#414439"
+            android:textSize="@dimen/fontsize_body_small" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/r9ubg231ai9s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Рецепты"
+            android:textColor="#414439"
+            android:textSize="@dimen/fontsize_body_small" />
+    </LinearLayout>
+</LinearLayout>
