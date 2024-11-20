@@ -307,5 +307,9 @@
             <!-- Add the rest of your layout content here -->
         </LinearLayout>
     </ScrollView>
-    <include layout="@layout/downpanel_layout"/>
+    <com.example.rainbowdish.NavigationPanelView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass" />
+
 </LinearLayout>

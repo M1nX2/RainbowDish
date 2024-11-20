@@ -61,8 +61,8 @@
                     android:gravity="center">
                     <ImageView
                     android:id="@+id/rq67t23gde9r"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:src="@drawable/rost"
                     android:scaleType="fitXY"
                     />
@@ -686,5 +686,8 @@
 
         </LinearLayout>
     </ScrollView>
-    <include layout="@layout/downpanel_layout"/>
+    <com.example.rainbowdish.NavigationPanelView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingClass" />
 </LinearLayout>
