@@ -22,6 +22,7 @@
             android:clipChildren="false"
             android:clipToPadding="false"
             android:orientation="vertical">
+
             <include
                 layout="@layout/header" />
             <LinearLayout
@@ -43,6 +44,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="vertical">
@@ -60,8 +62,6 @@
                                 android:clipToPadding="false"
                                 android:orientation="vertical"
                                 />
-
-
                             <ImageView
                                 android:id="@+id/rf362lghvknj"
                                 android:layout_width="24dp"
@@ -69,22 +69,27 @@
                                 android:layout_marginBottom="-8dp"
                                 android:layout_marginStart="20dp"
                                 android:layout_alignParentBottom="true"
-                                android:src="@mipmap/ic_launcher"
+                                android:src="@drawable/strelka_nazad"
                                 android:scaleType="fitXY"
                                 />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_marginStart="44dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+                                <TextView
+                                    android:id="@+id/rrdx0lry5u7"
+                                    android:textColor="#1A1C15"
+                                    android:textSize="20dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:text="Апельсин"
+                                    />
+                            </LinearLayout>
                         </RelativeLayout>
                     </LinearLayout>
-                    <TextView
-                        android:id="@+id/rrdx0lry5u7"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_large"
-                        android:layout_marginBottom="-6dp"
-                        android:layout_marginStart="131dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Апельсин"
-                        />
+
                 </RelativeLayout>
             </LinearLayout>
             <LinearLayout
@@ -99,7 +104,7 @@
                 android:orientation="horizontal">
                 <LinearLayout
                     android:id="@+id/rwmxt6ifcoh"
-                    android:layout_width="82dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:clipChildren="false"
@@ -107,11 +112,11 @@
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/rbig4r048efn"
-                        android:layout_width="match_parent"
+                        android:layout_width="82dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:background="@drawable/s516527sw1cr4"
-                        android:paddingVertical="14dp"
+                        android:paddingVertical="8dp"
                         android:layout_marginBottom="16dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
@@ -120,8 +125,7 @@
                             android:id="@+id/rubpo1oyag7h"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
-                            android:layout_marginBottom="7dp"
-                            android:layout_marginStart="31dp"
+                            android:layout_marginBottom="5dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="47"
@@ -130,7 +134,6 @@
                             android:id="@+id/r7fygpljnnmk"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_medium"
-                            android:layout_marginStart="13dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="калорий"
@@ -138,11 +141,11 @@
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/rvi3ikqw11f"
-                        android:layout_width="match_parent"
+                        android:layout_width="82dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:background="@drawable/s516527sw1cr4"
-                        android:paddingVertical="14dp"
+                        android:paddingVertical="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="vertical">
@@ -150,7 +153,7 @@
                             android:id="@+id/rdt581xdpcp8"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
-                            android:layout_marginBottom="10dp"
+                            android:layout_marginBottom="5dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="0,2 гр"
@@ -167,20 +170,19 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/rrzuo3n2wjem"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginEnd="4dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/r8clphnc95g9"
-                        android:layout_width="match_parent"
+                        android:layout_width="82dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:background="@drawable/s516527sw1cr4"
-                        android:paddingVertical="14dp"
+                        android:paddingVertical="8dp"
                         android:layout_marginBottom="16dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
@@ -189,7 +191,7 @@
                             android:id="@+id/rv984jxx404f"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
-                            android:layout_marginBottom="7dp"
+                            android:layout_marginBottom="5dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="0,9 гр"
@@ -205,11 +207,11 @@
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/rnqv59kba82"
-                        android:layout_width="match_parent"
+                        android:layout_width="82dp"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:background="@drawable/s516527sw1cr4"
-                        android:paddingVertical="14dp"
+                        android:paddingVertical="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="vertical">
@@ -217,8 +219,7 @@
                             android:id="@+id/rca15dbhmm2m"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
-                            android:layout_marginBottom="10dp"
-                            android:layout_marginStart="30dp"
+                            android:layout_marginBottom="5dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="9,4"
@@ -227,7 +228,6 @@
                             android:id="@+id/rkpmnf9z0hcg"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_medium"
-                            android:layout_marginStart="7dp"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="углеводов"
@@ -236,12 +236,140 @@
                 </LinearLayout>
                 <ImageView
                     android:id="@+id/rrg39ozowad"
-                    android:layout_width="110dp"
-                    android:layout_height="106dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="130dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_height="119dp"
+                    android:src="@drawable/apelsin"
                     android:scaleType="fitXY"
                     />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rikwtlqnu0x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="14dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pkmnbrfkvs1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="A: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/zxfthrsgm63rx831h"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="B5: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/vgykrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="C: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ri8jdxppvfw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginBottom="14dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/uyhnrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="B1: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/rfkvs1t36aze"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="B6: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/rfvgyrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="E: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rwwnqa2x9y8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginBottom="17dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rsgm63rx831h"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="B2: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/poiuyrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="B9: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/rtcu4o4rbr6n"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="K: 0,7 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/r4nlabxgb0cd"
                 android:layout_width="match_parent"
@@ -251,131 +379,125 @@
                 android:layout_marginHorizontal="21dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/rt05jl14uhi9"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="4dp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="Каротин: 0,5 мг"
-                    />
-                <TextView
-                    android:id="@+id/r9xf5zynykzb"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="35dp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Вб: 0,64 мг"
-                    />
-                <TextView
-                    android:id="@+id/rjurosmj2vqq"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Н: 1,0 мкг"
-                    />
-            </LinearLayout>
+                android:orientation="horizontal"/>
+
             <LinearLayout
-                android:id="@+id/rilxqvzo4w5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="14dp"
-                android:layout_marginHorizontal="21dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/rkjyuj7o76td"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="4dp"
-                    android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rikwtlqnu0x1"
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="В1: 0,04-0,05 мг"
-                    />
-                <TextView
-                    android:id="@+id/rdhuo9de0tb8"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="43dp"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Вс: 5,0 мг"
-                    />
-                <TextView
-                    android:id="@+id/rulfz675mdkc"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="РР: 0,2 мг"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ry1u73be5s8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="14dp"
-                android:layout_marginHorizontal="21dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/riz9m4dokzld"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="37dp"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="В2: 0,03-0,04 мг"
-                    />
-                <TextView
-                    android:id="@+id/rxm8hff5tib"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="14dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/rfkvs1t36aze1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="K: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/rsgm63rx831h1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="P: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/refydglnxthj2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Zn: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ri8jdxppvfw67"
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="С: 60,0 мг"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/rk0k7k71isrp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="17dp"
-                android:layout_marginHorizontal="22dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/rhctd74ufex9"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginEnd="69dp"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="B5: 0,25 мг"
-                    />
-                <TextView
-                    android:id="@+id/rlmosnw3lszd"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginBottom="14dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/hgfdrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Ca: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/qwertyrfkvs1t36aze"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Fe: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/dkfredfnbvfydgl"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="F: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wergrwwnqa2x9y8"
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:text="Е: 0,2 мг"
-                    />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginBottom="17dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sdcmvrsgm63rx831h"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Mg: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                    <TextView
+                        android:id="@+id/zxcvrefydglnxthj"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="I: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/rg51fc2td8ll"
                 android:layout_width="match_parent"
@@ -385,41 +507,83 @@
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/r3ueed9i43ak"
+                    android:layout_width="200dp"
+                    android:layout_height="69dp"
+                    android:background="@drawable/rounded_corners"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="11dp">
+
+                    <TextView
+                        android:id="@+id/reakfvrt6evc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:text="Единица измерения"
+                        android:textColor="#414439"
+                        android:textSize="@dimen/fontsize_body_small" />
+
+
+                    <LinearLayout
+                        android:id="@+id/r94z7h8pmm9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/spinner"
+                            android:layout_width="184dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
                 <LinearLayout
                     android:id="@+id/rolxpuj6qenf"
-                    android:layout_width="132dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:background="#E9E9DD"
+                    android:background="@drawable/rounded_corners"
                     android:paddingVertical="12dp"
                     android:paddingHorizontal="17dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
+
                     <LinearLayout
                         android:id="@+id/ryw4pi7cd6a"
-                        android:layout_width="64dp"
+                        android:layout_width="81dp"
                         android:layout_height="wrap_content"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="vertical">
+
                         <TextView
                             android:id="@+id/rn1tbt9z06h"
-                            android:textColor="#414439"
-                            android:textSize="@dimen/fontsize_body_small"
-                            android:layout_marginBottom="6dp"
+                            android:layout_width="81dp"
                             android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:text="Вес/кол-во"
-                            />
+                            android:layout_marginBottom="6dp"
+                            android:text="Количество"
+                            android:textColor="#414439"
+                            android:textSize="@dimen/fontsize_body_small" />
+
                         <TextView
                             android:id="@+id/rcnlt1dhflm"
-                            android:textColor="#414439"
-                            android:textSize="@dimen/fontsize_body_large"
-                            android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="100"
-                            />
+                            android:textColor="#414439"
+                            android:textSize="@dimen/fontsize_body_large" />
                     </LinearLayout>
                     <View
                         android:layout_width="0dp"
@@ -430,64 +594,11 @@
                         android:id="@+id/ri6428c11o6"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/krest"
                         android:scaleType="fitXY"
                         />
                 </LinearLayout>
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    />
-                <LinearLayout
-                    android:id="@+id/r3ueed9i43ak"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:background="#E9E9DD"
-                    android:paddingVertical="11dp"
-                    android:paddingHorizontal="16dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="vertical">
-                    <TextView
-                        android:id="@+id/reakfvrt6evc"
-                        android:textColor="#414439"
-                        android:textSize="@dimen/fontsize_body_small"
-                        android:layout_marginBottom="2dp"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Выбете вес/кол-во"
-                        />
-                    <LinearLayout
-                        android:id="@+id/r94z7h8pmm9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:clipChildren="false"
-                        android:clipToPadding="false"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:id="@+id/r2lhnjiva23w"
-                            android:textColor="#414439"
-                            android:textSize="@dimen/fontsize_body_large"
-                            android:layout_marginTop="4dp"
-                            android:layout_height="wrap_content"
-                            android:layout_width="wrap_content"
-                            android:text="Апельсин(1гр)"
-                            />
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            />
-                        <ImageView
-                            android:id="@+id/rn1hvgpnv7bd"
-                            android:layout_width="12dp"
-                            android:layout_height="6dp"
-                            android:src="@mipmap/ic_launcher"
-                            android:scaleType="fitXY"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
+
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/rnhwm05vs4xj"
@@ -500,8 +611,8 @@
                 android:clipToPadding="false"
                 android:orientation="horizontal">
                 <LinearLayout
-                    android:id="@+id/rv6f6a2gw5l"
-                    android:layout_width="132dp"
+                    android:id="@+id/r7323xgg4fey"
+                    android:layout_width="200dp"
                     android:layout_height="1dp"
                     android:background="#5D6054"
                     android:clipChildren="false"
@@ -514,8 +625,8 @@
                     android:layout_weight="1"
                     />
                 <LinearLayout
-                    android:id="@+id/r7323xgg4fey"
-                    android:layout_width="180dp"
+                    android:id="@+id/rv6f6a2gw5l"
+                    android:layout_width="150dp"
                     android:layout_height="1dp"
                     android:background="#5D6054"
                     android:clipChildren="false"
@@ -523,6 +634,16 @@
                     android:orientation="vertical">
                 </LinearLayout>
             </LinearLayout>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginTop="-22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="≈ 150 гр" />
+
+
             <LinearLayout
                 android:id="@+id/ror20eiqh6pp"
                 android:layout_width="match_parent"
@@ -538,7 +659,7 @@
                 <TextView
                     android:id="@+id/r5spvogxt3eu"
                     android:textColor="@color/surfaceContainerLowest"
-                    android:textSize="@dimen/fontsize_body_medium"
+                    android:textSize="@dimen/fontsize_body_large"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="Добавить"
