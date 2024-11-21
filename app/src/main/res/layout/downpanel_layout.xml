@@ -7,6 +7,7 @@
     android:background="#E3E3D8"
     android:paddingVertical="12dp"
     android:clipChildren="false"
+    android:elevation="12dp"
     android:clipToPadding="false">
 
     <!-- Вложенные элементы -->

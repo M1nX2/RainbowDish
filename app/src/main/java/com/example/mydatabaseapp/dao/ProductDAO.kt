@@ -15,7 +15,7 @@ class DatabaseDAO(context: Context) {
     fun getAllProducts(): List<Product> {
         val products = mutableListOf<Product>()
         val db = dbHelper.readableDatabase
-        val cursor: Cursor = db.rawQuery("SELECT * FROM Product", null)
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Product ORDER BY Product_Name ASC", null)
 
         if (cursor.moveToFirst()) {
             do {
@@ -29,14 +29,10 @@ class DatabaseDAO(context: Context) {
                     vitA = cursor.getDouble(cursor.getColumnIndexOrThrow("VitA")),
                     vitB1 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB1")),
                     vitB2 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB2")),
-                    vitB3 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB3")),
                     vitB5 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB5")),
                     vitB6 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB6")),
-                    vitB7 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB7")),
                     vitB9 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB9")),
-                    vitB12 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB12")),
                     vitC = cursor.getDouble(cursor.getColumnIndexOrThrow("VitC")),
-                    vitD = cursor.getDouble(cursor.getColumnIndexOrThrow("VitD")),
                     vitE = cursor.getDouble(cursor.getColumnIndexOrThrow("VitE")),
                     vitK = cursor.getDouble(cursor.getColumnIndexOrThrow("VitK")),
                     k = cursor.getDouble(cursor.getColumnIndexOrThrow("K")),

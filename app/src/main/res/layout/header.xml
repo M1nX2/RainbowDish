@@ -7,11 +7,12 @@
     android:background="@drawable/shapka"
     android:orientation="horizontal"
     android:paddingBottom="0dp"
+    android:elevation="12dp"
     android:gravity="center_vertical">
 
 
     <TextView
-        android:id="@+id/r54fwfaztdpb"
+        android:id="@+id/header_title"
         android:textColor="#1A1C15"
         android:textSize="@dimen/fontsize_headline_medium"
         android:layout_height="wrap_content"
