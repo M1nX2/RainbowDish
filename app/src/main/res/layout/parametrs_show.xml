@@ -2,14 +2,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/surfaceContainerLowest"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FAFAEE">
-    <include
-        layout="@layout/header" />
+    android:layout_height="match_parent">
     <ScrollView
         android:clipChildren="false"
         android:clipToPadding="false"
@@ -37,148 +35,172 @@
                     android:layout_height="match_parent"
                     android:clipChildren="false"
                     android:clipToPadding="false"
-                    android:orientation="vertical"/>
-
-
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/r50igvkoogbf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/s5e27fdsw1bb0cc77"
+                        android:paddingBottom="11dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/rrii3fccqqw"
+                            android:layout_width="56dp"
+                            android:layout_height="105dp"
+                            android:layout_marginEnd="50dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:scaleType="fitXY"
+                            />
+                        <TextView
+                            android:id="@+id/r4hx2uyqrkli"
+                            android:textColor="#1A1C15"
+                            android:textSize="@dimen/fontsize_headline_medium"
+                            android:layout_marginTop="41dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:text="Параметры"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/rugh8oi5akh8"
+                    app:shapeAppearanceOverlay="@style/cr3"
+                    android:layout_width="158dp"
+                    android:layout_height="59dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="-33dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/rq67t23gde9r"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="-18dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/rh1t72hr6gs7"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="-18dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/r2beq0v9iv9"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginBottom="-18dp"
+                    android:layout_marginStart="107dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+                <ImageView
+                    android:id="@+id/r0ay96i5ez9ac"
+                    android:layout_width="29dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="-17dp"
+                    android:layout_marginEnd="163dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
             </RelativeLayout>
-    <!--ШАПКА РОСТ ВЕС ПОЛ ЦЕЛЬ-->
             <LinearLayout
                 android:id="@+id/r820sb2hlzri"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="-20dp"
-                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
                 android:layout_marginHorizontal="38dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
-<!--ROST-->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/rxlf5l758b3s"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                    android:id="@+id/rq67t23gde9r"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:src="@drawable/rost"
-                    android:scaleType="fitXY"
+                    android:layout_width="wrap_content"
+                    android:text="167 см"
                     />
-                    <TextView
-                        android:id="@+id/rxlf5l758b3s"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="167 см"
-                        />
-                </LinearLayout>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     />
-<!--                VES     -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/rx1as71oa4qb"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/r2beq0v9iv9"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/ves" />
-                    <TextView
-                        android:id="@+id/rx1as71oa4qb"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="57 кг"
-                        />
-                </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:text="57 кг"
+                    />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     />
-<!--                POL -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/r6rkkbaoxh77"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/r0ay96i5ez9ac"
-                        android:layout_width="32dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/pol"
-                        android:scaleType="fitXY"
-                        />
-                    <TextView
-                        android:id="@+id/r6rkkbaoxh77"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Мужской"
-                        />
-                </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:text="Мужской"
+                    />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     />
-<!--                CEL-->
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/r9ixyz90lpvt"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:id="@+id/rh1t72hr6gs7"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/cel"
-                        android:scaleType="fitXY"
-                        />
-                    <TextView
-                        android:id="@+id/r9ixyz90lpvt"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Поддержание"
-                        />
-                </LinearLayout>
+                    android:layout_width="wrap_content"
+                    android:text="Поддержание"
+                    />
             </LinearLayout>
-            <!--  КНОПКА РЕДАКТИРОВАТЬ -->
             <LinearLayout
                 android:id="@+id/rvg2vsv39ebt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center">
-
+                android:gravity="center_vertical"
+                android:layout_marginBottom="27dp"
+                android:layout_marginHorizontal="112dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
                 <ImageView
                     android:id="@+id/rimpywthfktm"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/redaktirovat"
+                    android:src="@mipmap/ic_launcher"
                     android:scaleType="fitXY"
+                    />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     />
                 <TextView
                     android:id="@+id/ruro0db8s5gl"
                     android:textColor="#1A1C15"
                     android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_marginStart="10dp"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="Редактировать"
@@ -187,61 +209,52 @@
 
             <TextView
                 android:id="@+id/rcqlih83xnyl"
-                android:layout_width="wrap_content"
+                android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="18dp"
+                android:layout_marginHorizontal="73dp"
                 android:layout_marginBottom="18dp"
                 android:layout_weight="1"
                 android:text="Рекомендуется потреблять:"
                 android:textColor="#1A1C15"
                 android:textSize="@dimen/fontsize_body_large" />
-
-            <!-- ВИТАМИНЫ -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
             <LinearLayout
                 android:id="@+id/rikwtlqnu0x"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:gravity="center_vertical"
                 android:layout_marginBottom="14dp"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="21dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
-
                 <TextView
-                    android:id="@+id/pkmnbrfkvs1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="A: 20 мг"
+                    android:id="@+id/rn16e9qm03s"
                     android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/zxfthrsgm63rx831h"
-                    android:layout_width="0dp"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_marginEnd="28dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B5: 0,3 мг"
+                    android:layout_width="wrap_content"
+                    android:text="E: 10,2 мг"
+                    />
+                <TextView
+                    android:id="@+id/ran6wl32jfa"
                     android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/vgykrefydglnxthj"
-                    android:layout_width="0dp"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_marginEnd="39dp"
                     android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="С: 90 мг"
+                    />
+                <TextView
+                    android:id="@+id/rtcu4o4rbr6n"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_weight="1"
-                    android:text="C: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
+                    android:text="D: 0,7 мг"
+                    />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ri8jdxppvfw"
                 android:layout_width="match_parent"
@@ -252,34 +265,24 @@
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
-
                 <TextView
-                    android:id="@+id/uyhnrefydglnxthj"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B1: 0,5 мг"
+                    android:id="@+id/refydglnxthj"
                     android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_marginEnd="27dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="B5: 0,5 мг"
+                    />
                 <TextView
                     android:id="@+id/rfkvs1t36aze"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B6: 20 мг"
                     android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/rfvgyrefydglnxthj"
-                    android:layout_width="0dp"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_weight="1"
-                    android:text="E: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
+                    android:text="A: 20 мг"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/rwwnqa2x9y8"
@@ -291,217 +294,96 @@
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
-
+                <TextView
+                    android:id="@+id/rc1w7ckg7u5q"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_medium"
+                    android:layout_marginEnd="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="B: 0,4 мг"
+                    />
                 <TextView
                     android:id="@+id/rsgm63rx831h"
                     android:textColor="#1A1C15"
                     android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B2: 0,3 мг"
-                    />
-
-                <TextView
-                    android:id="@+id/poiuyrefydglnxthj"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B9: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/rtcu4o4rbr6n"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_weight="1"
-                    android:text="K: 0,7 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
+                    android:text="PP: 0,3 мг"
+                    />
             </LinearLayout>
-        </LinearLayout>
-            <!-- ВИТАМИНЫ -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:id="@+id/rikwtlqnu0x1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginHorizontal="20dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/rfkvs1t36aze1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="K: 20 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/rsgm63rx831h1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="P: 0,3 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/refydglnxthj2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Zn: 0,5 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ri8jdxppvfw67"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="14dp"
-                    android:layout_marginHorizontal="21dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/hgfdrefydglnxthj"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="Ca: 0,5 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/qwertyrfkvs1t36aze"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="Fe: 20 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/dkfredfnbvfydgl"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="F: 0,5 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/wergrwwnqa2x9y8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:layout_marginBottom="17dp"
-                    android:layout_marginHorizontal="21dp"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/sdcmvrsgm63rx831h"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="Mg: 0,3 мг"
-                        />
-
-                    <TextView
-                        android:id="@+id/zxcvrefydglnxthj"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="I: 0,5 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                </LinearLayout>
-            </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/rp3dqaoy0foe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="10dp"
-                android:layout_marginHorizontal="19dp"
+                android:layout_marginHorizontal="20dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
-
                 <LinearLayout
                     android:id="@+id/rpfz9qgdwzog"
-                    android:layout_width="180dp"
+                    android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
+                    android:paddingVertical="21dp"
+                    android:paddingHorizontal="16dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="16dp">
-
+                    android:orientation="vertical">
                     <LinearLayout
                         android:id="@+id/rh50ssflrqf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal">
-
                         <TextView
                             android:id="@+id/r1yji7jq53vg"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Калории"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium" />
-
+                            android:textSize="@dimen/fontsize_label_small"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Калории"
+                            />
                         <View
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:layout_weight="1" />
-
+                            android:layout_weight="1"
+                            />
                         <TextView
                             android:id="@+id/rfe0b90yugfj"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1900/2100"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium" />
+                            android:textSize="@dimen/fontsize_label_small"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="1900/2100"
+                            />
                     </LinearLayout>
-
-                    <ProgressBar
-                        android:id="@+id/progressBar2"
-                        style="?android:attr/progressBarStyleHorizontal"
+                    <LinearLayout
+                        android:id="@+id/rlxajyjjjml"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cr20b5bb95b"
+                        android:paddingLeft="102dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/rded2fvhfnl"
+                            android:layout_width="21dp"
+                            android:layout_height="6dp"
+                            android:background="#E3E3D8"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
-
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -509,10 +391,10 @@
                     />
                 <LinearLayout
                     android:id="@+id/rwu976fe0c2q"
-                    android:layout_width="180dp"
+                    android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
-                    android:paddingVertical="16dp"
+                    android:paddingVertical="21dp"
                     android:paddingHorizontal="16dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
@@ -522,14 +404,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginBottom="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="horizontal">
                         <TextView
                             android:id="@+id/ryiuct6ko6bp"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_marginEnd="4dp"
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
@@ -539,18 +421,31 @@
                         <TextView
                             android:id="@+id/razwl7pmsdf"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="100/130 гр"
                             />
                     </LinearLayout>
-
-                    <ProgressBar
-                        android:id="@+id/progressBar7"
-                        style="?android:attr/progressBarStyleHorizontal"
+                    <LinearLayout
+                        android:id="@+id/rykpwf9fb32j"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cr20bf7d604"
+                        android:paddingLeft="71dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/r70ap10w1qvi"
+                            android:layout_width="52dp"
+                            android:layout_height="6dp"
+                            android:background="#E3E3D8"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -559,16 +454,16 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="16dp"
-                android:layout_marginHorizontal="19dp"
+                android:layout_marginHorizontal="20dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:orientation="horizontal">
                 <LinearLayout
                     android:id="@+id/r729tir3gujq"
-                    android:layout_width="180dp"
+                    android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
-                    android:paddingVertical="16dp"
+                    android:paddingVertical="21dp"
                     android:paddingHorizontal="16dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
@@ -578,14 +473,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginBottom="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="horizontal">
                         <TextView
                             android:id="@+id/r8bmktauheed"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_marginEnd="4dp"
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
@@ -595,18 +490,31 @@
                         <TextView
                             android:id="@+id/r8yrgsdvjmzc"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="20/80 гр"
                             />
                     </LinearLayout>
-
-                    <ProgressBar
-                        android:id="@+id/progressBar3"
-                        style="?android:attr/progressBarStyleHorizontal"
+                    <LinearLayout
+                        android:id="@+id/r0loqb6x8wx3l"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cr20bc92629"
+                        android:paddingLeft="34dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/rsaqmwvwv0mq"
+                            android:layout_width="89dp"
+                            android:layout_height="6dp"
+                            android:background="#E3E3D8"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
                 <View
                     android:layout_width="0dp"
@@ -615,10 +523,10 @@
                     />
                 <LinearLayout
                     android:id="@+id/rjxe4yh5s5qg"
-                    android:layout_width="180dp"
+                    android:layout_width="155dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
-                    android:paddingVertical="16dp"
+                    android:paddingVertical="21dp"
                     android:paddingHorizontal="16dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
@@ -628,14 +536,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
-                        android:layout_marginBottom="5dp"
+                        android:layout_marginBottom="8dp"
                         android:clipChildren="false"
                         android:clipToPadding="false"
                         android:orientation="horizontal">
                         <TextView
                             android:id="@+id/rr0z2hogy39m"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="Углеводы"
@@ -648,18 +556,31 @@
                         <TextView
                             android:id="@+id/r1jmxok68dqy"
                             android:textColor="#1A1C15"
-                            android:textSize="@dimen/fontsize_label_medium"
+                            android:textSize="@dimen/fontsize_label_small"
                             android:layout_height="wrap_content"
                             android:layout_width="wrap_content"
                             android:text="290/300 гр"
                             />
                     </LinearLayout>
-
-                    <ProgressBar
-                        android:id="@+id/progressBar5"
-                        style="?android:attr/progressBarStyleHorizontal"
+                    <LinearLayout
+                        android:id="@+id/rg2l4l4ddgst"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cr20b5bb95b"
+                        android:paddingLeft="111dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/rvnmb2v4caxc"
+                            android:layout_width="12dp"
+                            android:layout_height="6dp"
+                            android:background="#E3E3D8"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="vertical">
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -677,7 +598,7 @@
                 <TextView
                     android:id="@+id/rxb3qmmzt7jm"
                     android:textColor="@color/surfaceContainerLowest"
-                    android:textSize="@dimen/fontsize_body_large"
+                    android:textSize="@dimen/fontsize_body_medium"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:text="Добавить продукт"
@@ -686,8 +607,5 @@
 
         </LinearLayout>
     </ScrollView>
-    <com.example.rainbowdish.NavigationPanelView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingClass" />
+    <include layout="@layout/downpanel_layout"/>
 </LinearLayout>
