@@ -7,4 +7,8 @@
         <item name="colorOnSecondary">@android:color/white</item>
         <item name="android:windowBackground">@color/background</item>
     </style>
+    <style name="Theme.RainbowDish.Night" parent="Theme.Material3.Light.NoActionBar">
+
+    </style>
+
 </resources>

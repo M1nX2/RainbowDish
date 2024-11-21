@@ -1,6 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rwdejvviuun"
+    android:id="@+id/downpanel"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -17,17 +17,21 @@
         android:paddingVertical="8dp">
 
         <LinearLayout
+            android:id="@+id/buttonParametrs"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/parametrs_vibr"
-                android:contentDescription="Параметры" />
+                android:id="@+id/iconParametrs"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:contentDescription="Параметры"
+                android:src="@drawable/parametrs" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,16 +42,20 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/buttonProducts"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/produkti"
+                android:id="@+id/iconProducts"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:src="@drawable/products"
                 android:contentDescription="Продукты" />
 
             <TextView
@@ -59,16 +67,20 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/buttonStats"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/statistika"
+                android:id="@+id/iconStats"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:src="@drawable/statistics"
                 android:contentDescription="Статистика" />
 
             <TextView
@@ -80,16 +92,21 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/buttonRecipes"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/recepti"
+                android:id="@+id/iconRecipes"
+                android:layout_width="64dp"
+                android:layout_height="32dp"
+                android:src="@drawable/recipes"
                 android:contentDescription="Рецепты" />
 
             <TextView
@@ -99,5 +116,6 @@
                 android:textSize="12sp"
                 android:textColor="#000000" />
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>
