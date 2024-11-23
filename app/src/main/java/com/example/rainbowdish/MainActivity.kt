@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.mydatabaseapp.dao.DatabaseDAO
 import com.example.rainbowdish.screens.ProductAdd
+import com.example.rainbowdish.screens.ProductsShow
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val buttonGoToProductAdd: Button = findViewById(R.id.button_go_to_product_add)
         buttonGoToProductAdd.setOnClickListener {
             // Создаем Intent для перехода на экран ProductAdd
-            val intent = Intent(this, ProductAdd::class.java)
+            val intent = Intent(this, ProductsShow::class.java)
             startActivity(intent)
         }
     }

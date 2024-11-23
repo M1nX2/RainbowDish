@@ -78,7 +78,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center">
                                 <TextView
-                                    android:id="@+id/rrdx0lry5u7"
+                                    android:id="@+id/product_name"
                                     android:textColor="#1A1C15"
                                     android:textSize="20dp"
                                     android:layout_alignParentBottom="true"
@@ -122,7 +122,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/rubpo1oyag7h"
+                            android:id="@+id/kcal"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
                             android:layout_marginBottom="5dp"
@@ -150,7 +150,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/rdt581xdpcp8"
+                            android:id="@+id/fat"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
                             android:layout_marginBottom="5dp"
@@ -188,7 +188,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/rv984jxx404f"
+                            android:id="@+id/protein"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
                             android:layout_marginBottom="5dp"
@@ -216,7 +216,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <TextView
-                            android:id="@+id/rca15dbhmm2m"
+                            android:id="@+id/carbohydrates"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_body_large"
                             android:layout_marginBottom="5dp"
@@ -235,13 +235,15 @@
                     </LinearLayout>
                 </LinearLayout>
                 <ImageView
-                    android:id="@+id/rrg39ozowad"
+                    android:id="@+id/product_image"
                     android:layout_width="130dp"
                     android:layout_marginStart="40dp"
                     android:layout_height="119dp"
                     android:src="@drawable/apelsin"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
                     />
+
             </LinearLayout>
 
             <LinearLayout
@@ -261,7 +263,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/pkmnbrfkvs1"
+                        android:id="@+id/VitA"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -270,7 +272,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/zxfthrsgm63rx831h"
+                        android:id="@+id/VitB5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -279,7 +281,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/vgykrefydglnxthj"
+                        android:id="@+id/VitC"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -301,7 +303,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/uyhnrefydglnxthj"
+                        android:id="@+id/VitB1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -310,7 +312,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/rfkvs1t36aze"
+                        android:id="@+id/VitB6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -319,7 +321,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/rfvgyrefydglnxthj"
+                        android:id="@+id/VitE"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -341,7 +343,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/rsgm63rx831h"
+                        android:id="@+id/VitB2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -350,7 +352,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/poiuyrefydglnxthj"
+                        android:id="@+id/VitB9"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -359,7 +361,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/rtcu4o4rbr6n"
+                        android:id="@+id/VitK"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -398,7 +400,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/rfkvs1t36aze1"
+                        android:id="@+id/K"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -407,7 +409,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/rsgm63rx831h1"
+                        android:id="@+id/P"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -416,7 +418,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/refydglnxthj2"
+                        android:id="@+id/Zn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -438,7 +440,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/hgfdrefydglnxthj"
+                        android:id="@+id/Ca"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -447,7 +449,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/qwertyrfkvs1t36aze"
+                        android:id="@+id/Fe"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -456,7 +458,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/dkfredfnbvfydgl"
+                        android:id="@+id/F"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -478,7 +480,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/sdcmvrsgm63rx831h"
+                        android:id="@+id/Mg"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -487,7 +489,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/zxcvrefydglnxthj"
+                        android:id="@+id/I"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"

@@ -1,5 +1,8 @@
 package com.example.mydatabaseapp.models
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Product(
     var idProduct: Int = 0,
     var productName: String,
@@ -26,4 +29,4 @@ data class Product(
     var f: Double = 0.0,
     var avgWeight: Double? = null,
     var productImg: String? = null
-)
+) : Parcelable

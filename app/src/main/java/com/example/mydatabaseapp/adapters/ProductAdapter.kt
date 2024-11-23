@@ -1,6 +1,8 @@
 package com.example.mydatabaseapp.adapters
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +12,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.rainbowdish.R
 import com.example.mydatabaseapp.models.Product
+import com.example.rainbowdish.screens.ProductAdd
 import kotlin.math.roundToInt
 
 class ProductAdapter(private val context: Context, private val products: List<Product>) :
@@ -37,6 +40,18 @@ class ProductAdapter(private val context: Context, private val products: List<Pr
                 holder.productImage.setImageResource(imageResourceId)
             }
         }
+
+        // Установка клика для перехода на другую активность
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, ProductAdd::class.java)
+            intent.putExtra("product", product) // Передаём объект
+            context.startActivity(intent)
+
+            if (context is Activity) {
+                context.overridePendingTransition(0, 0)
+            }
+        }
+
     }
 
     override fun getItemCount(): Int = products.size
