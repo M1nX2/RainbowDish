@@ -21,6 +21,7 @@
         </intent-filter>
     </activity>
         <activity android:name=".screens.ProductsShow">
+
             <!-- Опционально, можно указать, чтобы эта активность запускалась первым экраном -->
             <!-- <intent-filter> ... </intent-filter> -->
         </activity>
@@ -32,6 +33,7 @@
         <activity android:name=".screens.RecipesShow"
             tools:ignore="Instantiatable" />
         <activity android:name=".screens.ProductAdd" />
+        <activity android:name=".screens.ParametrsAdd" />
     </application>
 
 

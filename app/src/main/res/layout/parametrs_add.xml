@@ -86,14 +86,15 @@
                         android:layout_width="wrap_content"
                         android:text="Рост" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/height"
                         android:textColor="@color/onSurfaceVariant"
                         android:textSize="@dimen/fontsize_body_large"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
-                        android:text="Введите рост, см" />
+                        android:background="@null"
+                        android:hint="Введите рост, см" />
                 </LinearLayout>
 
                 <ImageView
@@ -147,14 +148,15 @@
                         android:layout_width="wrap_content"
                         android:text="Вес" />
 
-                    <TextView
+                    <EditText
                         android:id="@+id/weight"
                         android:textColor="#414439"
                         android:textSize="@dimen/fontsize_body_large"
                         android:layout_height="wrap_content"
                         android:layout_width="match_parent"
                         android:layout_weight="1"
-                        android:text="Введите вес, кг" />
+                        android:background="@null"
+                        android:hint="Введите вес, кг" />
 
                 </LinearLayout>
 
@@ -211,6 +213,7 @@
 
                     <Spinner
                         android:id="@+id/gender"
+                        android:paddingHorizontal="2dp"
                         android:layout_width="240dp"
                         android:layout_height="wrap_content" />
 
@@ -264,6 +267,7 @@
                     <Spinner
                         android:id="@+id/goal"
                         android:layout_width="240dp"
+                        android:paddingHorizontal="2dp"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
@@ -286,6 +290,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:clickable="true"
+                android:focusable="true"
                 android:background="@drawable/cr100b36490d"
                 android:paddingVertical="16dp"
                 android:layout_marginBottom="78dp"

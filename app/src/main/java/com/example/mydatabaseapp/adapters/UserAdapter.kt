@@ -23,7 +23,7 @@ class UserAdapter(private val context: Context) : BaseAdapter() {
         return users.size
     }
 
-    override fun getItem(position: Int): Any {
+    override fun getItem(position: Int): User {
         return users[position]
     }
 
@@ -31,31 +31,14 @@ class UserAdapter(private val context: Context) : BaseAdapter() {
         return position.toLong()
     }
 
-    @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.parametrs_show, parent, false)
-
-        val user = users[position]
-
-        // Настроим значения для отображения на лейауте
-        val heightTextView = view.findViewById<TextView>(R.id.user_height)
-        val weightTextView = view.findViewById<TextView>(R.id.user_weight)
-        val genderTextView = view.findViewById<TextView>(R.id.user_gender)
-        val goalTextView = view.findViewById<TextView>(R.id.user_goal)
-
-
-        // Заполняем данные пользователя
-        heightTextView.text = "${user.height} см"
-        weightTextView.text = "${user.weight} кг"
-        genderTextView.text = user.gender
-        goalTextView.text = user.goal
-
-
-        return view
+        TODO("Not yet implemented")
     }
+
 
     // Метод для проверки наличия пользователей в базе данных
     fun hasUsers(): Boolean {
         return users.isNotEmpty()
     }
+
 }

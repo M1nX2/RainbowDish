@@ -13,13 +13,14 @@ import com.example.mydatabaseapp.dao.DatabaseDAO
 import com.example.mydatabaseapp.models.User
 import com.example.rainbowdish.adapters.UserAdapter
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 
 class ParametrsAdd : AppCompatActivity() {
     private lateinit var heightEditText: EditText
     private lateinit var weightEditText: EditText
     private lateinit var genderSpinner: Spinner
     private lateinit var goalSpinner: Spinner
-    private lateinit var calculateButton: Button
+    private lateinit var calculateButton: LinearLayout
     private lateinit var databaseDAO: DatabaseDAO
     private lateinit var userAdapter: UserAdapter
 
@@ -27,6 +28,8 @@ class ParametrsAdd : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.parametrs_add)
 
+        val header: TextView = findViewById(R.id.header_title)
+        header.text = "Параметры"
         // Инициализация элементов интерфейса
         heightEditText = findViewById(R.id.height)
         weightEditText = findViewById(R.id.weight)
