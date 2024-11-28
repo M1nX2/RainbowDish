@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         databaseDAO = DatabaseDAO(this)
 
 
-
+        databaseDAO.printDatabaseTables()
         val buttonGoToProductAdd: Button = findViewById(R.id.button_go_to_product_add)
         buttonGoToProductAdd.setOnClickListener {
             // Создаем Intent для перехода на экран ProductAdd
@@ -32,4 +32,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 }

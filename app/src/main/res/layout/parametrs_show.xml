@@ -43,7 +43,7 @@
             </RelativeLayout>
     <!--ШАПКА РОСТ ВЕС ПОЛ ЦЕЛЬ-->
             <LinearLayout
-                android:id="@+id/r820sb2hlzri"
+                android:id="@+id/user_parametrs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -67,7 +67,7 @@
                     android:scaleType="fitXY"
                     />
                     <TextView
-                        android:id="@+id/rxlf5l758b3s"
+                        android:id="@+id/user_height"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium"
                         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/ves" />
                     <TextView
-                        android:id="@+id/rx1as71oa4qb"
+                        android:id="@+id/user_weight"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium"
                         android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
                         android:scaleType="fitXY"
                         />
                     <TextView
-                        android:id="@+id/r6rkkbaoxh77"
+                        android:id="@+id/user_gender"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium"
                         android:layout_height="wrap_content"
@@ -150,7 +150,7 @@
                         android:scaleType="fitXY"
                         />
                     <TextView
-                        android:id="@+id/r9ixyz90lpvt"
+                        android:id="@+id/user_goal"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium"
                         android:layout_height="wrap_content"

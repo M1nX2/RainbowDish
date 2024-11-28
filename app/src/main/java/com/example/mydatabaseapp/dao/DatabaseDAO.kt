@@ -1,17 +1,44 @@
 package com.example.mydatabaseapp.dao
 
+import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
+import android.util.Log
 import com.example.mydatabaseapp.DatabaseHelper
 import com.example.mydatabaseapp.models.Product
 import com.example.mydatabaseapp.models.Recipe
 import com.example.mydatabaseapp.models.RecipeProduct
 import com.example.mydatabaseapp.models.Record
+import com.example.mydatabaseapp.models.User
 
 class DatabaseDAO(context: Context) {
     private val dbHelper = DatabaseHelper(context)
 
+
+    companion object {
+        private const val TABLE_USERS = "User"
+        private const val COLUMN_ID = "Id"
+        private const val COLUMN_GENDER = "Gender"
+        private const val COLUMN_WEIGHT = "Weight"
+        private const val COLUMN_HEIGHT = "Height"
+        private const val COLUMN_GOAL = "Goal"
+    }
     // Получение всех продуктов из таблицы Product
+
+    fun printDatabaseTables() {
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'", null)
+        if (cursor.moveToFirst()) {
+            do {
+                val tableName = cursor.getString(0)
+                Log.d("DatabaseTables", "Table: $tableName")
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+    }
+
     fun getAllProducts(): List<Product> {
         val products = mutableListOf<Product>()
         val db = dbHelper.readableDatabase
@@ -121,5 +148,48 @@ class DatabaseDAO(context: Context) {
         cursor.close()
         db.close()
         return records
+    }
+
+    // Получение всех пользователей из таблицы User
+    fun getAllUsers(): List<User> {
+        val users = mutableListOf<User>()
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM User", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val user = User(
+                    id = cursor.getInt(cursor.getColumnIndexOrThrow("Id")),
+                    gender = cursor.getString(cursor.getColumnIndexOrThrow("Gender")),
+                    weight = cursor.getInt(cursor.getColumnIndexOrThrow("Weight")),
+                    height = cursor.getInt(cursor.getColumnIndexOrThrow("Height")),
+                    goal = cursor.getString(cursor.getColumnIndexOrThrow("Goal"))
+                )
+                users.add(user)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        db.close()
+        return users
+    }
+
+    // Метод для добавления пользователя
+    fun addUser(user: User): Long {
+        val db: SQLiteDatabase = dbHelper.writableDatabase
+
+        val contentValues = ContentValues().apply {
+            put(COLUMN_GENDER, user.gender)
+            put(COLUMN_WEIGHT, user.weight)
+            put(COLUMN_HEIGHT, user.height)
+            put(COLUMN_GOAL, user.goal)
+        }
+
+        // Вставка данных в таблицу User
+        val userId = db.insert(TABLE_USERS, null, contentValues)
+
+        // Закрываем базу данных после операции
+        db.close()
+
+        return userId
     }
 }

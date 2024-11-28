@@ -27,9 +27,23 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         }
     }
 
+
+
     @Throws(IOException::class)
     private fun copyDatabase(context: Context) {
-        // Открытие исходного файла из assets и запись его в папку баз данных приложения
+        val databaseFile = File(databasePath)
+        if (databaseFile.exists()) {
+            // Удаляем старую базу данных
+            databaseFile.delete()
+        }
+
+        // Создаём папку, если её нет
+        val dbDir = File(databaseFile.parent)
+        if (!dbDir.exists()) {
+            dbDir.mkdirs()
+        }
+
+        // Копируем новую базу данных
         context.assets.open(DATABASE_NAME).use { inputStream ->
             FileOutputStream(databasePath).use { outputStream ->
                 inputStream.copyTo(outputStream)

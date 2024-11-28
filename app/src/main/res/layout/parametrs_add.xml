@@ -87,7 +87,7 @@
                         android:text="Рост" />
 
                     <TextView
-                        android:id="@+id/rrfrdxgclrcj"
+                        android:id="@+id/height"
                         android:textColor="@color/onSurfaceVariant"
                         android:textSize="@dimen/fontsize_body_large"
                         android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
                         android:text="Вес" />
 
                     <TextView
-                        android:id="@+id/rxbmywl79ew"
+                        android:id="@+id/weight"
                         android:textColor="#414439"
                         android:textSize="@dimen/fontsize_body_large"
                         android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
                         android:text="Пол" />
 
                     <Spinner
-                        android:id="@+id/spinner2"
+                        android:id="@+id/gender"
                         android:layout_width="240dp"
                         android:layout_height="wrap_content" />
 
@@ -262,7 +262,7 @@
                         android:text="Цель" />
 
                     <Spinner
-                        android:id="@+id/spinner3"
+                        android:id="@+id/goal"
                         android:layout_width="240dp"
                         android:layout_height="wrap_content" />
 
@@ -282,7 +282,7 @@
                 android:orientation="vertical" />
 
             <LinearLayout
-                android:id="@+id/r7rvo9p07tm"
+                android:id="@+id/calculate_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"

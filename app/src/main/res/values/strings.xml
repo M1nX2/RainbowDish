@@ -23,4 +23,15 @@
 
     <!-- Остальные настройки -->
     <string name="hello_world">Hello World!</string>
+
+    <string-array name="gender_options">
+        <item>Мужчина</item>
+        <item>Женщина</item>
+    </string-array>
+
+    <string-array name="goal_options">
+        <item>Поддержание</item>
+        <item>Набор</item>
+        <item>Снижение</item>
+    </string-array>
 </resources>
