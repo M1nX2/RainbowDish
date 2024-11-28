@@ -159,7 +159,7 @@ class DatabaseDAO(context: Context) {
         if (cursor.moveToFirst()) {
             do {
                 val user = User(
-                    id = cursor.getInt(cursor.getColumnIndexOrThrow("Id")),
+                    id = cursor.getInt(cursor.getColumnIndexOrThrow("ID")),
                     gender = cursor.getString(cursor.getColumnIndexOrThrow("Gender")),
                     weight = cursor.getInt(cursor.getColumnIndexOrThrow("Weight")),
                     height = cursor.getInt(cursor.getColumnIndexOrThrow("Height")),
