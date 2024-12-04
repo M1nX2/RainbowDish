@@ -1,31 +1,32 @@
 package com.example.mydatabaseapp.adapters
 
 import android.util.Log
+import kotlin.math.roundToInt
 import com.example.mydatabaseapp.models.User
 
 //    здесь начались настины прикольные расчёты
 data class NutritionData(
-    val calories: Double,
-    val protein: Double,
-    val fat: Double,
-    val carbs: Double,
-    val vitaminA: Double,  // мкг
+    val calories: Int,
+    val protein: Int,
+    val fat: Int,
+    val carbs: Int,
+    val vitaminA: Int,  // мкг
     val vitaminB1: Double, // мг
     val vitaminB2: Double, //мг
-    val vitaminB5: Double, //мг
+    val vitaminB5: Int, //мг
     val vitaminB6: Double, //мг
-    val vitaminB9: Double, // мкг
-    val vitaminC: Double, // мг
-    val vitaminE: Double, //
-    val vitaminK: Double, //
-    val K: Double, //
-    val Ca: Double, // мг
-    val Mg: Double, //
-    val P: Double, //
-    val Fe: Double, //
-    val I: Double, // мг
-    val Zn: Double, //
-    val F: Double //
+    val vitaminB9: Int, // мкг
+    val vitaminC: Int, // мг
+    val vitaminE: Int, //
+    val vitaminK: Int, //
+    val K: Int, //
+    val Ca: Int, // мг
+    val Mg: Int, //
+    val P: Int, //
+    val Fe: Int, //
+    val I: Int, // мг
+    val Zn: Int, //
+    val F: Int //
 )
 
 fun calculateNutrition(user: User): NutritionData {
@@ -93,27 +94,28 @@ fun calculateNutrition(user: User): NutritionData {
 
 
     return NutritionData(
-        calories = maintenanceCalories,
-        protein = proteinGrams,
-        fat = fatGrams,
-        carbs = carbGrams,
-        vitaminA = vitaminA,
+        calories = maintenanceCalories.roundToInt(),
+        protein = proteinGrams.roundToInt(),
+        fat = fatGrams.roundToInt(),
+        carbs = carbGrams.roundToInt(),
+        vitaminA = vitaminA.roundToInt(),
         vitaminB1 =vitaminB1,
         vitaminB2 = vitaminB2,
-        vitaminB5 = vitaminB5,
+        vitaminB5 = vitaminB5.roundToInt(),
         vitaminB6 = vitaminB6,
-        vitaminB9 = vitaminB9,
-        vitaminC = vitaminC,
-        vitaminE = vitaminE,
-        vitaminK = vitaminK,
-        K = K,
-        Ca = Ca,
-        Mg = Mg,
-        P = P,
-        Fe = Fe,
-        I = I,
-        Zn = Zn,
-        F = F
+        vitaminB9 = vitaminB9.roundToInt(),
+        vitaminC = vitaminC.roundToInt(),
+        vitaminE = vitaminE.roundToInt(),
+        vitaminK = vitaminK.roundToInt(),
+        K = K.roundToInt(),
+        Ca = Ca.roundToInt(),
+        Mg = Mg.roundToInt(),
+        P = P.roundToInt(),
+        Fe = Fe.roundToInt(),
+        I = I.roundToInt(),
+        Zn = Zn.roundToInt(),
+        F = F.roundToInt()
     )
 }
 //    а здесь конч(ились)
+//    пацан ты с кем так разговариваешь
