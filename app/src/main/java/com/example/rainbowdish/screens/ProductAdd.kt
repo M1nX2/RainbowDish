@@ -32,15 +32,15 @@ class ProductAdd : AppCompatActivity() {
             findViewById<TextView>(R.id.carbohydrates).text = "${product.carbohydrates} г"
 
             // Витамины
-            findViewById<TextView>(R.id.VitA).text = "A: ${product.vitA} мг"
+            findViewById<TextView>(R.id.VitA).text = "A: ${product.vitA} мкг"
             findViewById<TextView>(R.id.VitB1).text = "B1: ${product.vitB1} мг"
             findViewById<TextView>(R.id.VitB2).text = "B2: ${product.vitB2} мг"
             findViewById<TextView>(R.id.VitB5).text = "B5: ${product.vitB5} мг"
             findViewById<TextView>(R.id.VitB6).text = "B6: ${product.vitB6} мг"
-            findViewById<TextView>(R.id.VitB9).text = "B9: ${product.vitB9} мг"
+            findViewById<TextView>(R.id.VitB9).text = "B9: ${product.vitB9} мкг"
             findViewById<TextView>(R.id.VitC).text = "C: ${product.vitC} мг"
             findViewById<TextView>(R.id.VitE).text = "E: ${product.vitE} мг"
-            findViewById<TextView>(R.id.VitK).text = "K: ${product.vitK} мг"
+            findViewById<TextView>(R.id.VitK).text = "K: ${product.vitK} мкг"
 
             // Минералы
             findViewById<TextView>(R.id.K).text = "K: ${product.k} мг"
@@ -48,7 +48,7 @@ class ProductAdd : AppCompatActivity() {
             findViewById<TextView>(R.id.Mg).text = "Mg: ${product.mg} мг"
             findViewById<TextView>(R.id.P).text = "P: ${product.p} мг"
             findViewById<TextView>(R.id.Fe).text = "Fe: ${product.fe} мг"
-            findViewById<TextView>(R.id.I).text = "I: ${product.i} мг"
+            findViewById<TextView>(R.id.I).text = "I: ${product.i} мкг"
             findViewById<TextView>(R.id.Zn).text = "Zn: ${product.zn} мг"
             findViewById<TextView>(R.id.F).text = "F: ${product.f} мг"
 

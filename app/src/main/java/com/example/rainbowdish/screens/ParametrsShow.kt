@@ -91,4 +91,7 @@ class ParametrsShow : AppCompatActivity() {
             finish() // Завершаем текущую активность
         }
     }
+
+
+
 }
