@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rainbowdish.R
 import com.example.rainbowdish.adapters.UserAdapter
@@ -19,6 +20,7 @@ class ParametrsShow : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
 
         // Создаем экземпляр адаптера для пользователей
@@ -58,6 +60,26 @@ class ParametrsShow : AppCompatActivity() {
                 genderTextView.text = user.gender
                 goalTextView.text = user.goal
                 iconParametrs.setImageResource(R.drawable.parametrs_active)
+
+                // Обработчик клика на линейный лэйаут, который отправит текущего пользователя в экран редактирования
+                val editLayout = findViewById<LinearLayout>(R.id.parametrs_edit)
+                editLayout.setOnClickListener {
+                    // Отправка данных пользователя в ParametrsAdd
+                    val editIntent = Intent(this, ParametrsAdd::class.java)
+                    editIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                    editIntent.putExtra("user", user) // Передача текущего пользователя
+                    startActivity(editIntent)
+                    overridePendingTransition(0, 0)
+                }
+
+                val productButton = findViewById<LinearLayout>(R.id.product_show)
+                productButton.setOnClickListener{
+                    val productIntent = Intent(this, ProductsShow::class.java)
+                    productIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                    startActivity(productIntent)
+                    overridePendingTransition(0, 0)
+                }
+
             } else {
                 // Если пользователь равен null, показываем сообщение
                 Toast.makeText(this, "Ошибка: пользователь не найден.", Toast.LENGTH_LONG).show()

@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.RainbowDish"
         android:supportsRtl="true"
+        android:windowAnimationStyle="@android:style/Animation.Translucent"
         >
 
     <activity

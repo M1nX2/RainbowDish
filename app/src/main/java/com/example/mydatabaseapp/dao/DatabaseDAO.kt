@@ -192,4 +192,30 @@ class DatabaseDAO(context: Context) {
 
         return userId
     }
+
+    fun updateUser(user: User): Int {
+        val db: SQLiteDatabase = dbHelper.writableDatabase
+
+        // Создаем объект ContentValues с обновленными данными
+        val contentValues = ContentValues().apply {
+            put(COLUMN_GENDER, user.gender)
+            put(COLUMN_WEIGHT, user.weight)
+            put(COLUMN_HEIGHT, user.height)
+            put(COLUMN_GOAL, user.goal)
+        }
+
+        // Обновляем запись в таблице User по ID
+        val rowsUpdated = db.update(
+            TABLE_USERS,
+            contentValues,
+            "$COLUMN_ID = ?",
+            arrayOf(user.id.toString()) // Передаем ID пользователя для поиска нужной строки
+        )
+
+        // Закрываем базу данных
+        db.close()
+
+        return rowsUpdated // Возвращаем количество обновленных строк (обычно будет 1 или 0)
+    }
+
 }
