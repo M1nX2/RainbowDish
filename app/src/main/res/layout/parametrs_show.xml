@@ -161,7 +161,7 @@
             </LinearLayout>
             <!--  КНОПКА РЕДАКТИРОВАТЬ -->
             <LinearLayout
-                android:id="@+id/rvg2vsv39ebt"
+                android:id="@+id/parametrs_edit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -663,7 +663,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/rmrk4nia7jdj"
+                android:id="@+id/product_show"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
