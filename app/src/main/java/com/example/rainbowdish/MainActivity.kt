@@ -14,8 +14,10 @@ import com.example.mydatabaseapp.dao.DatabaseDAO
 import com.example.rainbowdish.screens.ParametrsShow
 import com.example.mydatabaseapp.adapters.calculateNutrition
 import com.example.rainbowdish.adapters.UserAdapter
+import com.example.rainbowdish.adapters.WeeklyNutritionAdapter
 import com.example.rainbowdish.screens.ProductAdd
 import com.example.rainbowdish.screens.ProductsShow
+import com.jakewharton.threetenabp.AndroidThreeTen
 
 
 class MainActivity : AppCompatActivity() {
@@ -23,20 +25,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AndroidThreeTen.init(this)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.activity_main)
 
         databaseDAO = DatabaseDAO(this)
-        val userAdapter = UserAdapter(this)
-        val user = userAdapter.getItem(0)
-        Log.d("DEBUG", "Gender value: ${user.gender}")
-        val nutritionData = calculateNutrition(user)
 
-        // Выводим результат в лог
-        Log.d("NutritionData", "Calculated: $nutritionData")
+        val adapter = WeeklyNutritionAdapter(this) // this — это контекст Activity
+        val nutritionData2 = adapter.calculateWeeklyNutrition()
+        Log.d("NutritionData2", "Calculated: $nutritionData2")
+        Toast.makeText(this, "Результат2: $nutritionData2", Toast.LENGTH_LONG).show()
 
-        // Выводим результат на экран
-        Toast.makeText(this, "Результат: $nutritionData", Toast.LENGTH_LONG).show()
         databaseDAO.printDatabaseTables()
         val buttonGoToProductAdd: Button = findViewById(R.id.button_go_to_product_add)
         buttonGoToProductAdd.setOnClickListener {

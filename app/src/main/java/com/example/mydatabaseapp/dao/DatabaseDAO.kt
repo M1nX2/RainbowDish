@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
+import android.icu.text.AlphabeticIndex
 import android.util.Log
 import com.example.mydatabaseapp.DatabaseHelper
 import com.example.mydatabaseapp.models.Product
@@ -11,6 +12,8 @@ import com.example.mydatabaseapp.models.Recipe
 import com.example.mydatabaseapp.models.RecipeProduct
 import com.example.mydatabaseapp.models.Record
 import com.example.mydatabaseapp.models.User
+import org.threeten.bp.LocalDate
+import org.threeten.bp.format.DateTimeFormatter
 
 class DatabaseDAO(context: Context) {
     private val dbHelper = DatabaseHelper(context)
@@ -134,21 +137,60 @@ class DatabaseDAO(context: Context) {
         val db = dbHelper.readableDatabase
         val cursor: Cursor = db.rawQuery("SELECT * FROM Record", null)
 
+        // Проверяем, есть ли записи в курсоре
         if (cursor.moveToFirst()) {
+            val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy") // Укажите формат вашей даты
+
             do {
+                val date = cursor.getString(cursor.getColumnIndexOrThrow("Date"))
+                val localDate = LocalDate.parse(date, formatter)
+
                 val record = Record(
                     idRecord = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Record")),
-                    date = cursor.getString(cursor.getColumnIndexOrThrow("Date")),
+                    date = localDate,
                     productId = cursor.getInt(cursor.getColumnIndexOrThrow("Product_ID")),
                     quantity = cursor.getDouble(cursor.getColumnIndexOrThrow("Quantity"))
                 )
+
                 records.add(record)
-            } while (cursor.moveToNext())
+            } while (cursor.moveToNext()) // Переходим к следующей строке
+        } else {
+            println("Таблица Record пуста.")
         }
         cursor.close()
         db.close()
+
         return records
     }
+
+    fun addRecord(record: Record) {
+        val db = dbHelper.writableDatabase
+
+        // Создаем объект ContentValues для добавления данных в базу данных
+        val values = ContentValues().apply {
+            // Преобразуем дату в строку с нужным форматом
+            val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+            val formattedDate = record.date.format(formatter)
+
+            // Заполняем значения для записи в таблице
+            put("Date", formattedDate)  // Сохраняем отформатированную дату
+            put("Product_ID", record.productId)
+            put("Quantity", record.quantity)
+        }
+
+        // Вставляем запись в таблицу Record
+        val newRowId = db.insert("Record", null, values)
+
+        // Логирование, если необходимо
+        if (newRowId == -1L) {
+            println("Ошибка при добавлении записи.")
+        } else {
+            println("Запись успешно добавлена. ID записи: $newRowId")
+        }
+
+        db.close()
+    }
+
 
     // Получение всех пользователей из таблицы User
     fun getAllUsers(): List<User> {

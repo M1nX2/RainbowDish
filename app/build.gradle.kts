@@ -61,7 +61,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
-
+    implementation("com.jakewharton.threetenabp:threetenabp:1.4.4")
     implementation("androidx.room:room-runtime:2.5.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
