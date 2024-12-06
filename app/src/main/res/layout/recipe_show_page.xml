@@ -93,6 +93,7 @@
 
                 </RelativeLayout>
             </LinearLayout>
+<!--начало верхушки рецепта -->
             <LinearLayout
                 android:id="@+id/rfquwjsylon"
                 android:layout_width="match_parent"
@@ -239,43 +240,74 @@
                             />
                     </LinearLayout>
                 </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
                 <LinearLayout
-                    android:id="@+id/rx5ks21pfj1g23"
-                    android:layout_marginBottom="0dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:clipChildren="false"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    >
-                    <ImageView
-                        android:id="@+id/rcx3jfp277dj23"
-                        android:layout_width="12dp"
-                        android:layout_height="15dp"
-                        android:layout_marginEnd="8dp"
-                        android:src="@drawable/ves"
-                        android:scaleType="fitXY"
-                        />
-                    <TextView
-                        android:id="@+id/ves"
-                        android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/rx5ks21pfj1g23"
+                        android:layout_marginBottom="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="100 г"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"  />
-                </LinearLayout>
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:id="@+id/rcx3jfp277dj23"
+                            android:layout_width="12dp"
+                            android:layout_height="15dp"
+                            android:layout_marginEnd="8dp"
+                            android:src="@drawable/ves"
+                            android:scaleType="fitXY"
+                            />
+                        <TextView
+                            android:id="@+id/ves"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="100 г"
+                            android:textColor="#1A1C15"
+                            android:textSize="@dimen/fontsize_body_medium"  />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:background="@drawable/recipe_time"
+                            android:layout_gravity="end"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/fontsize_label_medium"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="4dp"
+                                android:text="20 мин"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
                 <ImageView
                     android:id="@+id/product_image"
                     android:layout_width="124dp"
-                    android:layout_marginStart="40dp"
                     android:layout_height="104dp"
-                    android:src="@drawable/oladi"
-                    android:scaleType="centerInside"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/krest"
                     android:adjustViewBounds="true"
                     />
+                </LinearLayout>
 
             </LinearLayout>
+<!--конец верхушки рецепта -->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -367,7 +399,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="21dp"
-                    android:layout_marginBottom="17dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:gravity="center_vertical"
@@ -529,9 +560,9 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                 </LinearLayout>
+            </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-
                     android:layout_height="wrap_content"
                     android:gravity="center">
                     <TextView
@@ -545,25 +576,187 @@
                         android:textStyle="bold"
                         />
                 </LinearLayout>
+
+<!-- Ингридиенты -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/rbjrjfgig4r048e234fn"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/ingrerytid"
+                            android:textColor="#1A1C15"
+                            android:textSize="@dimen/fontsize_body_large"
+                            android:layout_marginBottom="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Банан"
+                            />
+                        <TextView
+                            android:id="@+id/ingdsgr1"
+                            android:textColor="#5D6054"
+                            android:textSize="@dimen/fontsize_body_medium"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="3 шт"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/rbig4r048e234fn"
+                        android:layout_width="82dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:paddingVertical="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/ingrid"
+                            android:textColor="#1A1C15"
+                            android:textSize="@dimen/fontsize_body_large"
+                            android:layout_marginBottom="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Банан"
+                            />
+                        <TextView
+                            android:id="@+id/ingr1"
+                            android:textColor="#5D6054"
+                            android:textSize="@dimen/fontsize_body_medium"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="3 шт"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+<!-- ИНГРИДИЕНТЫ КОНЧ ИЛИСЬ -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/sposob"
+                    android:textColor="#1A1C15"
+                    android:textSize="@dimen/fontsize_body_large"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Способ приготовления:"
+                    android:textStyle="bold"
+                    />
             </LinearLayout>
 
+<!--    ШАГИ ПРИГОТОВЛЕНИЯ        -->
+
+<!--   типа шаг 1 -->
+            <LinearLayout
+                android:id="@+id/rnhsdfwm05vs4xj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="20dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/eclipse_step"/>
+                    <TextView
+                        android:id="@+id/sdfgh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Шаг 1:"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="13dp"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/sd34675fgh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Разомните банан вилкой, превратите его в однородную кашицу."
+                        android:textColor="#5D6054"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                </LinearLayout>
+            </LinearLayout>
+<!--      типа шаг 1 кончился      -->
+
+            <!--      типа шаг 2      -->
             <LinearLayout
                 android:id="@+id/rnhwm05vs4xj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="23dp"
                 android:layout_marginHorizontal="20dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:orientation="horizontal">
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/eclipse_step"/>
+                    <TextView
+                        android:id="@+id/sdfsdfggh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Шаг 1:"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                </LinearLayout>
 
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="13dp"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/sd675fgh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Разомните банан вилкой, превратите его в однородную кашицу."
+                        android:textColor="#5D6054"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                </LinearLayout>
             </LinearLayout>
+            <!--      типа шаг 2 конч      -->
 
 
         </LinearLayout>
