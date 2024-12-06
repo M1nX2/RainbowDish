@@ -2,6 +2,7 @@ package com.example.rainbowdish.screens
 
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rainbowdish.adapters.WeeklyNutritionAdapter// чето я не поняла че к чему че не так
 import com.example.mydatabaseapp.adapters.NutritionData
@@ -23,6 +24,9 @@ class StatsShow : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.statistics)
+
+        val header: TextView = findViewById(R.id.header_title)
+        header.text = "Статистика"
 
         weeklyNutritionAdapter = WeeklyNutritionAdapter(this)
         currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition()

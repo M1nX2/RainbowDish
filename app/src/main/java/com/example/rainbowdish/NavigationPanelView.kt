@@ -32,7 +32,7 @@ class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout
 
 
 
-        val iconRecipes = findViewById<ImageView>(R.id.iconRecipes)
+
         // Навешиваем обработчики событий
         buttonParametrs.setOnClickListener {
 
@@ -50,7 +50,7 @@ class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout
         }
 
         buttonRecipes.setOnClickListener {
-            iconRecipes.setImageResource(R.drawable.recipes_active)
+
             navigateTo(context, RecipesShow::class.java)
         }
 

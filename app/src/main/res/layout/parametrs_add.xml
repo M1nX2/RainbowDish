@@ -98,8 +98,10 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/rkh7f1gp1t3"
+                    android:id="@+id/height_clear"
                     android:layout_width="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:layout_height="24dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/krest" />
@@ -161,9 +163,11 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/re3f727n404p"
+                    android:id="@+id/weight_clear"
                     android:layout_width="24dp"
                     android:layout_height="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:src="@drawable/krest"
                     android:scaleType="fitXY" />
             </LinearLayout>
