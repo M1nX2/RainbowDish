@@ -34,6 +34,14 @@ class RecipeAdapter(
         // Если нужно, загрузите изображение, например, через Glide или Picasso
         // Glide.with(holder.imageView.context).load(recipe.imageUrl).into(holder.imageView)
 
+        recipe.recipeIMG?.let { imageName ->
+            // Преобразуем строку в ресурс изображения
+            val imageResId = holder.itemView.context.resources.getIdentifier(imageName, "drawable", holder.itemView.context.packageName)
+            if (imageResId != 0) {
+                holder.imageView.setImageResource(imageResId)  // Устанавливаем изображение
+            }
+        }
+
         // Устанавливаем обработчик клика на элемент карточки
         holder.itemView.setOnClickListener {
             onItemClickListener(recipe)
