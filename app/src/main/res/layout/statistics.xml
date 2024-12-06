@@ -439,7 +439,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingEnd="5dp"
-                        android:src="@drawable/circle_p"/>
+                        android:src="@drawable/circle_ca"/>
                     <TextView
                         android:id="@+id/stat_ca"
                         android:layout_width="0dp"
