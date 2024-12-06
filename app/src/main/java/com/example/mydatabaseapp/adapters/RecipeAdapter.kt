@@ -1,5 +1,8 @@
 package com.example.rainbowdish.adapters
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +11,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mydatabaseapp.models.Recipe
 import com.example.rainbowdish.R
+import com.example.rainbowdish.RecipeShowPage
+import com.example.rainbowdish.screens.ProductAdd
 import kotlin.math.roundToInt
 
 class RecipeAdapter(
+    private val context: Context,
     private val recipes: List<Recipe>,
     private val onItemClickListener: (Recipe) -> Unit // Лямбда-функция для обработки кликов
 ) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
@@ -44,7 +50,13 @@ class RecipeAdapter(
 
         // Устанавливаем обработчик клика на элемент карточки
         holder.itemView.setOnClickListener {
-            onItemClickListener(recipe)
+            val intent = Intent(context, RecipeShowPage::class.java)
+            intent.putExtra("recipe", recipe) // Передаём объект
+            context.startActivity(intent)
+
+            if (context is Activity) {
+                context.overridePendingTransition(0, 0)
+            }
         }
     }
 

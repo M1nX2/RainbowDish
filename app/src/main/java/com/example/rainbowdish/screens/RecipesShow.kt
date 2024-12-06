@@ -32,7 +32,7 @@ class RecipesShow : AppCompatActivity() {
         val recipes = databaseDAO.getAllRecipes()
 
         // Создаем и устанавливаем адаптер
-        val adapter = RecipeAdapter(recipes) { recipe ->
+        val adapter = RecipeAdapter(this, recipes) { recipe ->
             // Обработка клика на рецепт
             Toast.makeText(this, "Вы выбрали рецепт: ${recipe.nameR}", Toast.LENGTH_SHORT).show()
         }
