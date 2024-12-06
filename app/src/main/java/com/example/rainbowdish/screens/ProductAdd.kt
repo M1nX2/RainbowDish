@@ -1,5 +1,6 @@
 package com.example.rainbowdish.screens
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.text.Editable
@@ -114,6 +115,7 @@ class ProductAdd : AppCompatActivity() {
             // Слушатель изменений в EditText (количество)
             // Слушатель изменений в EditText (количество)
             quantityEditText.addTextChangedListener(object : TextWatcher {
+                @SuppressLint("SetTextI18n")
                 override fun afterTextChanged(s: Editable?) {
                     // Получаем введенное количество
                     val quantityText = s.toString()
@@ -129,6 +131,8 @@ class ProductAdd : AppCompatActivity() {
                         quantity
                     }
 
+                    val textView3 = findViewById<TextView>(R.id.textView3)
+                    textView3.setText("≈ "+ finalQuantity + "гр")
                     // Отображаем finalQuantity (например, в другом TextView)
                     // Например:
                     // someTextView.text = "Вес: $finalQuantity"
@@ -166,6 +170,9 @@ class ProductAdd : AppCompatActivity() {
                     } else {
                         quantity
                     }
+
+                    val textView3 = findViewById<TextView>(R.id.textView3)
+                    textView3.setText("≈ "+ finalQuantity + "гр")
 
                     // Отображаем finalQuantity (например, в другом TextView)
                     // someTextView.text = "Вес: $finalQuantity"
