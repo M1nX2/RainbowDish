@@ -263,10 +263,10 @@
                         >
                         <ImageView
                             android:id="@+id/rcx3jfp277dj23"
-                            android:layout_width="12dp"
+                            android:layout_width="15dp"
                             android:layout_height="15dp"
-                            android:layout_marginEnd="8dp"
-                            android:src="@drawable/ves"
+                            android:layout_marginEnd="4dp"
+                            android:src="@drawable/kitchen_scale"
                             android:scaleType="fitXY"
                             />
                         <TextView
