@@ -106,10 +106,10 @@ class ParametrsShow : AppCompatActivity() {
 
         //витаминс
         findViewById<TextView>(R.id.pars_vit_a).text = "A: ${currentNutritionData.vitaminA}/${requiredNutritionData.vitaminA} мкг"
-        findViewById<TextView>(R.id.pars_vit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${requiredNutritionData.vitaminB1} мг"
-        findViewById<TextView>(R.id.pars_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${requiredNutritionData.vitaminB2} мг"
+        findViewById<TextView>(R.id.pars_vit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${"%.1f".format(requiredNutritionData.vitaminB1)} мг"
+        findViewById<TextView>(R.id.pars_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${"%.1f".format(requiredNutritionData.vitaminB2)} мг"
         findViewById<TextView>(R.id.pars_vit_b5).text = "B5: ${currentNutritionData.vitaminB5}/${requiredNutritionData.vitaminB5} мг"
-        findViewById<TextView>(R.id.pars_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${requiredNutritionData.vitaminB6} мг"
+        findViewById<TextView>(R.id.pars_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${"%.1f".format(requiredNutritionData.vitaminB6)} мг"
         findViewById<TextView>(R.id.pars_vit_b9).text = "B9: ${currentNutritionData.vitaminB9}/${requiredNutritionData.vitaminB9} мкг"
         findViewById<TextView>(R.id.pars_vit_c).text = "C: ${currentNutritionData.vitaminC}/${requiredNutritionData.vitaminC} мг"
         findViewById<TextView>(R.id.pars_vit_e).text = "E: ${currentNutritionData.vitaminE}/${requiredNutritionData.vitaminE} мг"

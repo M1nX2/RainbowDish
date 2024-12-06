@@ -198,217 +198,258 @@
                 android:textSize="@dimen/fontsize_body_large" />
 
             <!-- ВИТАМИНЫ -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/rikwtlqnu0x"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:layout_marginBottom="14dp"
-                android:layout_marginHorizontal="20dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/pars_vit_a"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="A: 20 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/pars_vit_b5"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B5: 0,3 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/pars_vit_c"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="C: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/ri8jdxppvfw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="14dp"
-                android:layout_marginHorizontal="21dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/pars_vit_b1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B1: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/pars_vit_b6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B6: 20 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/pars_vit_e"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="E: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/rwwnqa2x9y8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="17dp"
-                android:layout_marginHorizontal="21dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/pars_vit_b2"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B2: 0,3 мг"
-                    />
-
-                <TextView
-                    android:id="@+id/pars_vit_b9"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="B9: 0,5 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-                <TextView
-                    android:id="@+id/pars_vit_k"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="K: 0,7 мг"
-                    android:textColor="#1A1C15"
-                    android:textSize="@dimen/fontsize_body_medium" />
-
-            </LinearLayout>
-        </LinearLayout>
-            <!-- ВИТАМИНЫ -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:id="@+id/rikwtlqnu0x1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:layout_marginBottom="14dp"
+                    android:layout_marginBottom="7dp"
                     android:layout_marginHorizontal="20dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
                     <TextView
-                        android:id="@+id/pars_k"
-                        android:layout_width="0dp"
+                        android:id="@+id/pars_vit_a"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="K: 20 мг"
+                        android:text="A: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/pars_p"
+                    <View
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="P: 0,3 мг"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
-
-                    <TextView
-                        android:id="@+id/pars_zn"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:text="Zn: 0,5 мг"
+                        />
+                    <TextView
+                        android:id="@+id/pars_ca"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ca: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/ri8jdxppvfw67"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="14dp"
+                    android:layout_marginBottom="7dp"
                     android:layout_marginHorizontal="21dp"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
                     <TextView
-                        android:id="@+id/pars_ca"
-                        android:layout_width="0dp"
+                        android:id="@+id/pars_vit_b1"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="Ca: 0,5 мг"
+                        android:text="B1: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/pars_zn"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="Zn: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
 
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="21dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_b2"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="B2: 0,3 мг"
+                        />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/pars_p"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="P: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_b5"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="B5: 0,3 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/pars_k"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="K: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="21dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_b6"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="B6: 20 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
                     <TextView
                         android:id="@+id/pars_fe"
-                        android:layout_width="0dp"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
                         android:text="Fe: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
 
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="21dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_b9"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="B9: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/pars_mg"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="Mg: 0,3 мг"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="21dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_c"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="C: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
                     <TextView
                         android:id="@+id/pars_f"
-                        android:layout_width="0dp"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:text="F: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
 
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/wergrwwnqa2x9y8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginHorizontal="21dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/pars_vit_e"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="E: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/pars_i"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:text="I: 0,5 мг"
+                        android:textColor="#1A1C15"
+                        android:textSize="@dimen/fontsize_body_medium" />
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -417,28 +458,17 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
                     <TextView
-                        android:id="@+id/pars_mg"
-                        android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium"
-                        android:layout_width="0dp"
+                        android:id="@+id/pars_vit_k"
+                        android:layout_width="170dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="2"
-                        android:text="Mg: 0,3 мг"
-                        />
-
-                    <TextView
-                        android:id="@+id/pars_i"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="3"
-                        android:text="I: 0,5 мг"
+                        android:text="K: 0,7 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
 
                 </LinearLayout>
             </LinearLayout>
+
 
             <LinearLayout
                 android:id="@+id/rp3dqaoy0foe"
@@ -453,14 +483,15 @@
 
                 <LinearLayout
                     android:id="@+id/rpfz9qgdwzog"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="vertical"
                     android:paddingHorizontal="16dp"
-                    android:paddingVertical="16dp">
+                    android:paddingVertical="16dp"
+                    android:layout_marginEnd="5dp">
 
                     <LinearLayout
                         android:id="@+id/rh50ssflrqf"
@@ -509,7 +540,7 @@
                     />
                 <LinearLayout
                     android:id="@+id/rwu976fe0c2q"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
                     android:paddingVertical="16dp"
@@ -565,7 +596,7 @@
                 android:orientation="horizontal">
                 <LinearLayout
                     android:id="@+id/r729tir3gujq"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
                     android:paddingVertical="16dp"
@@ -615,7 +646,7 @@
                     />
                 <LinearLayout
                     android:id="@+id/rjxe4yh5s5qg"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/s516527sw1cr4"
                     android:paddingVertical="16dp"
