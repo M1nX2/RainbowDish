@@ -1,13 +1,18 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Фон прогресс-бара -->
     <item android:id="@android:id/background">
         <shape android:shape="rectangle">
-            <solid android:color="#D3D3D3" />
+            <solid android:color="#D3D3D3" /> <!-- Цвет фона -->
+            <corners android:radius="8dp" />  <!-- Закругленные края -->
         </shape>
     </item>
+
+    <!-- Полоска прогресса -->
     <item android:id="@android:id/progress">
         <clip>
             <shape android:shape="rectangle">
-                <solid android:color="#F7D705" /> <!-- Yellow color -->
+                <solid android:color="#F7D705" /> <!-- Цвет прогресса -->
+                <corners android:radius="8dp" /> <!-- Закругленные края -->
             </shape>
         </clip>
     </item>
