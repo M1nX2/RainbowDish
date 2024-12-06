@@ -1,6 +1,8 @@
 package com.example.rainbowdish.screens
 
 import android.os.Bundle
+import org.threeten.bp.LocalDate
+import org.threeten.bp.DayOfWeek
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -10,6 +12,7 @@ import com.example.mydatabaseapp.adapters.NutritionData
 import com.example.mydatabaseapp.models.User
 import com.example.rainbowdish.R
 import com.example.rainbowdish.adapters.UserAdapter
+import androidx.core.content.ContextCompat
 
 
 class StatsShow : AppCompatActivity() {
@@ -29,6 +32,10 @@ class StatsShow : AppCompatActivity() {
 
         val header: TextView = findViewById(R.id.header_title)
         header.text = "Статистика"
+
+        //устанавливаю дату
+        val date_text: String = getCurrentWeekRange()
+        findViewById<TextView>(R.id.date_textView).text = date_text
 
         weeklyNutritionAdapter = WeeklyNutritionAdapter(this)
         currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition()
@@ -52,30 +59,35 @@ class StatsShow : AppCompatActivity() {
         val imageViewZn: ImageView = findViewById(R.id.imageViewOverlay_Zn)
 
         //витаминс
-        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${currentNutritionData.vitaminA} / ${requiredNutritionData.vitaminA} мкг"
-        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${currentNutritionData.vitaminB1} / ${requiredNutritionData.vitaminB1} мг"
-        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${currentNutritionData.vitaminB2} / ${requiredNutritionData.vitaminB2} мг"
-        findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${currentNutritionData.vitaminB5} / ${requiredNutritionData.vitaminB5} мг"
-        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${currentNutritionData.vitaminB6} / ${requiredNutritionData.vitaminB6} мг"
-        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${currentNutritionData.vitaminB9} / ${requiredNutritionData.vitaminB9} мкг"
-        findViewById<TextView>(R.id.stat_vit_c).text = "C: ${currentNutritionData.vitaminC} / ${requiredNutritionData.vitaminC} мг"
-        findViewById<TextView>(R.id.stat_vit_e).text = "E: ${currentNutritionData.vitaminE} / ${requiredNutritionData.vitaminE} мг"
-        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${currentNutritionData.vitaminK} / ${requiredNutritionData.vitaminK} мкг"
+        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${"%.1f".format(currentNutritionData.vitaminA)}/${requiredNutritionData.vitaminA} мкг"
+        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${requiredNutritionData.vitaminB1} мг"
+        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${requiredNutritionData.vitaminB2} мг"
+        findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${"%.1f".format(currentNutritionData.vitaminB5)}/${requiredNutritionData.vitaminB5} мг"
+        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${requiredNutritionData.vitaminB6} мг"
+        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${"%.1f".format(currentNutritionData.vitaminB9)}/${requiredNutritionData.vitaminB9} мкг"
+        findViewById<TextView>(R.id.stat_vit_c).text = "C: ${"%.1f".format(currentNutritionData.vitaminC)}/${requiredNutritionData.vitaminC} мг"
+        findViewById<TextView>(R.id.stat_vit_e).text = "E: ${"%.1f".format(currentNutritionData.vitaminE)}/${requiredNutritionData.vitaminE} мг"
+        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${"%.1f".format(currentNutritionData.vitaminK)}/${requiredNutritionData.vitaminK} мкг"
 
         // Минералы
-        findViewById<TextView>(R.id.stat_k).text = "K: ${currentNutritionData.K} / ${requiredNutritionData.K} мг"
-        findViewById<TextView>(R.id.stat_ca).text = "Ca: ${currentNutritionData.Ca} / ${requiredNutritionData.Ca} мг"
-        findViewById<TextView>(R.id.stat_mg).text = "Mg: ${currentNutritionData.Mg} / ${requiredNutritionData.Mg} мг"
-        findViewById<TextView>(R.id.stat_p).text = "P: ${currentNutritionData.P} / ${requiredNutritionData.P} мг"
-        findViewById<TextView>(R.id.stat_fe).text = "Fe: ${currentNutritionData.Fe} / ${requiredNutritionData.Fe} мг"
-        findViewById<TextView>(R.id.stat_i).text = "I: ${currentNutritionData.I} / ${requiredNutritionData.I} мкг"
-        findViewById<TextView>(R.id.stat_zn).text = "Zn: ${currentNutritionData.Zn} / ${requiredNutritionData.Zn} мг"
-        findViewById<TextView>(R.id.stat_f).text = "F: ${currentNutritionData.F} / ${requiredNutritionData.F} мг"
+        findViewById<TextView>(R.id.stat_k).text = "K: ${"%.1f".format(currentNutritionData.K)}/${requiredNutritionData.K} мг"
+        findViewById<TextView>(R.id.stat_ca).text = "Ca: ${"%.1f".format(currentNutritionData.Ca)}/${requiredNutritionData.Ca} мг"
+        findViewById<TextView>(R.id.stat_mg).text = "Mg: ${"%.1f".format(currentNutritionData.Mg)}/${requiredNutritionData.Mg} мг"
+        findViewById<TextView>(R.id.stat_p).text = "P: ${"%.1f".format(currentNutritionData.P)}/${requiredNutritionData.P} мг"
+        findViewById<TextView>(R.id.stat_fe).text = "Fe: ${"%.1f".format(currentNutritionData.Fe)}/${requiredNutritionData.Fe} мг"
+        findViewById<TextView>(R.id.stat_i).text = "I: ${"%.1f".format(currentNutritionData.I)}/${requiredNutritionData.I} мкг"
+        findViewById<TextView>(R.id.stat_zn).text = "Zn: ${"%.1f".format(currentNutritionData.Zn)}/${requiredNutritionData.Zn} мг"
+        findViewById<TextView>(R.id.stat_f).text = "F: ${"%.1f".format(currentNutritionData.F)}/${requiredNutritionData.F} мг"
 
         val kcalProgressBar: ProgressBar = findViewById(R.id.stat_kcal_progressBar)
         val proteinProgressBar: ProgressBar = findViewById(R.id.stat_protein_progressBar)
         val fatsProgressBar: ProgressBar = findViewById(R.id.stat_fats_progressBar)
         val carbsProgressBar: ProgressBar = findViewById(R.id.stat_carbs_progressBar)
+
+        findViewById<TextView>(R.id.stats_kcal_text).text = "${"%.1f".format(currentNutritionData.calories)}/${requiredNutritionData.calories}"
+        findViewById<TextView>(R.id.stats_protein_text).text = "${"%.1f".format(currentNutritionData.protein)}/${requiredNutritionData.protein}"
+        findViewById<TextView>(R.id.stats_fats_text).text = "${"%.1f".format(currentNutritionData.fat)}/${requiredNutritionData.fat}"
+        findViewById<TextView>(R.id.stats_carbs_text).text = "${"%.1f".format(currentNutritionData.carbs)}/${requiredNutritionData.carbs}"
 
         kcalProgressBar.max = requiredNutritionData.calories
         proteinProgressBar.max = requiredNutritionData.protein
@@ -86,6 +98,25 @@ class StatsShow : AppCompatActivity() {
         proteinProgressBar.progress = currentNutritionData.protein
         fatsProgressBar.progress = currentNutritionData.fat
         carbsProgressBar.progress = currentNutritionData.carbs
+
+        val progressBarList: List<Pair<ProgressBar, Int>> = listOf(
+            Pair(kcalProgressBar, currentNutritionData.calories),
+            Pair(proteinProgressBar, currentNutritionData.protein),
+            Pair(fatsProgressBar, currentNutritionData.fat),
+            Pair(carbsProgressBar, currentNutritionData.carbs)
+        )
+
+        progressBarList.forEach { (progressBar, value) ->
+            val percentage = value.toFloat() / progressBar.max * 100
+
+            val drawableRes = when {
+                percentage <= 30 -> R.drawable.progress_red
+                percentage <= 60 -> R.drawable.progress_yellow
+                else -> R.drawable.progress_green
+            }
+            progressBar.progress = value
+            progressBar.progressDrawable = ContextCompat.getDrawable(progressBar.context, drawableRes)
+        }
 
         val iconStats = findViewById<ImageView>(R.id.iconStats)
         iconStats.setImageResource(R.drawable.statistics_active)
@@ -169,5 +200,20 @@ class StatsShow : AppCompatActivity() {
             "F" -> nutritionData.F.toDouble()
             else -> 0.0
         }
+    }
+
+    fun getCurrentWeekRange(today: LocalDate = LocalDate.now()): String {
+
+        // Вычисляем дату понедельника текущей недели
+        val startOfWeek = today.with(DayOfWeek.MONDAY)
+
+        // Вычисляем дату воскресенья текущей недели
+        val endOfWeek = today.with(DayOfWeek.SUNDAY)
+
+        // Формат для вывода дат
+        val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+
+        // Возвращаем диапазон в виде строки
+        return "${startOfWeek.format(formatter)} - ${endOfWeek.format(formatter)}"
     }
 }

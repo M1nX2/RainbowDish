@@ -72,7 +72,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center">
                     <TextView
-                        android:id="@+id/rblzu1y4ytz5"
+                        android:id="@+id/date_textView"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_large"
                         android:layout_height="wrap_content"
@@ -209,7 +209,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_a"/>
                     <TextView
                         android:id="@+id/stat_vit_a"
                         android:layout_width="0dp"
@@ -218,7 +223,12 @@
                         android:text="A: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_b"/>
                     <TextView
                         android:id="@+id/stat_vit_b5"
                         android:layout_width="0dp"
@@ -227,7 +237,12 @@
                         android:text="B5: 0,3 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_c"/>
                     <TextView
                         android:id="@+id/stat_vit_c"
                         android:layout_width="0dp"
@@ -249,7 +264,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_b"/>
                     <TextView
                         android:id="@+id/stat_bit_b1"
                         android:layout_width="0dp"
@@ -258,7 +278,12 @@
                         android:text="B1: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_b"/>
                     <TextView
                         android:id="@+id/stat_vit_b6"
                         android:layout_width="0dp"
@@ -267,7 +292,12 @@
                         android:text="B6: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_e"/>
                     <TextView
                         android:id="@+id/stat_vit_e"
                         android:layout_width="0dp"
@@ -288,7 +318,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_b"/>
                     <TextView
                         android:id="@+id/stat_vit_b2"
                         android:textColor="#1A1C15"
@@ -298,7 +333,12 @@
                         android:layout_weight="2"
                         android:text="B2: 0,3 мг"
                         />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_b"/>
                     <TextView
                         android:id="@+id/stat_vit_b9"
                         android:layout_width="0dp"
@@ -307,7 +347,12 @@
                         android:text="B9: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_vit_k"/>
                     <TextView
                         android:id="@+id/stat_vit_k"
                         android:layout_width="0dp"
@@ -334,7 +379,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_kali"/>
                     <TextView
                         android:id="@+id/stat_k"
                         android:layout_width="0dp"
@@ -343,7 +393,12 @@
                         android:text="K: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_p"/>
                     <TextView
                         android:id="@+id/stat_p"
                         android:layout_width="0dp"
@@ -352,7 +407,12 @@
                         android:text="P: 0,3 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_zn"/>
                     <TextView
                         android:id="@+id/stat_zn"
                         android:layout_width="0dp"
@@ -374,7 +434,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_p"/>
                     <TextView
                         android:id="@+id/stat_ca"
                         android:layout_width="0dp"
@@ -383,7 +448,12 @@
                         android:text="Ca: 0,5 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_fe"/>
                     <TextView
                         android:id="@+id/stat_fe"
                         android:layout_width="0dp"
@@ -392,7 +462,12 @@
                         android:text="Fe: 20 мг"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium" />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_f"/>
                     <TextView
                         android:id="@+id/stat_f"
                         android:layout_width="0dp"
@@ -413,7 +488,12 @@
                     android:clipChildren="false"
                     android:clipToPadding="false"
                     android:orientation="horizontal">
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_mg"/>
                     <TextView
                         android:id="@+id/stat_mg"
                         android:textColor="#1A1C15"
@@ -423,7 +503,12 @@
                         android:layout_weight="2"
                         android:text="Mg: 0,3 мг"
                         />
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/circle_i"/>
                     <TextView
                         android:id="@+id/stat_i"
                         android:layout_width="0dp"
@@ -479,7 +564,7 @@
                         android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/rfe0b90yugfj"
+                        android:id="@+id/stats_kcal_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1900/2100"
@@ -539,7 +624,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/rfe0b90yugfj2"
+                            android:id="@+id/stats_protein_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1900/2100"
@@ -599,7 +684,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/rfe0b90yugfj23"
+                            android:id="@+id/stats_fats_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1900/2100"
@@ -659,7 +744,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/rfe0b90yugfj24"
+                            android:id="@+id/stats_carbs_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1900/2100"
