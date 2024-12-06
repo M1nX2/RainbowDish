@@ -352,7 +352,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingEnd="5dp"
-                        android:src="@drawable/circle_k"/>
+                        android:src="@drawable/circle_vit_k"/>
                     <TextView
                         android:id="@+id/stat_vit_k"
                         android:layout_width="0dp"
@@ -384,7 +384,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:paddingEnd="5dp"
-                        android:src="@drawable/circle_ka"/>
+                        android:src="@drawable/circle_kali"/>
                     <TextView
                         android:id="@+id/stat_k"
                         android:layout_width="0dp"
