@@ -50,6 +50,24 @@ class WeeklyNutritionAdapter(
         // Возврат итогового объекта NutritionData
         return totals.toNutritionData()
     }
+    fun calculateDailyNutrition(today: LocalDate = LocalDate.now()): NutritionData {
+        // Фильтруем записи за текущий день
+        val dailyRecords = foodRecords.filter { it.date == today }
+
+        // Используем сводный объект для накопления результатов
+        val totals = Totals()
+
+        // Подсчет данных за день
+        dailyRecords.forEach { record ->
+            products.find { it.idProduct == record.productId }?.let { product ->
+                val ratio = record.quantity / 100.0
+                totals.addProduct(product, ratio)
+            }
+        }
+
+        // Возврат итогового объекта NutritionData
+        return totals.toNutritionData()
+    }
 
     /**
      * Класс для накопления итоговых данных.

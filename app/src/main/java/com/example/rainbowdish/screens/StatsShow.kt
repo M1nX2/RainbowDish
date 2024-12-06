@@ -63,15 +63,15 @@ class StatsShow : AppCompatActivity() {
         val imageViewZn: ImageView = findViewById(R.id.imageViewOverlay_Zn)
 
         //витаминс
-        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${"%.1f".format(currentNutritionData.vitaminA)}/${requiredNutritionData.vitaminA} мкг"
-        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${currentNutritionData.vitaminB1}/${requiredNutritionData.vitaminB1} мг"
-        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${currentNutritionData.vitaminB2}/${requiredNutritionData.vitaminB2} мг"
+        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${currentNutritionData.vitaminA}/${requiredNutritionData.vitaminA} мкг"
+        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${"%.1f".format(requiredNutritionData.vitaminB1)} мг"
+        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${"%.1f".format(requiredNutritionData.vitaminB2)} мг"
         findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${currentNutritionData.vitaminB5}/${requiredNutritionData.vitaminB5} мг"
-        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${currentNutritionData.vitaminB6}/${requiredNutritionData.vitaminB6} мг"
-        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${"%.1f".format(currentNutritionData.vitaminB9)}/${requiredNutritionData.vitaminB9} мкг"
+        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${"%.1f".format(requiredNutritionData.vitaminB6)} мг"
+        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${currentNutritionData.vitaminB9}/${requiredNutritionData.vitaminB9} мкг"
         findViewById<TextView>(R.id.stat_vit_c).text = "C: ${currentNutritionData.vitaminC}/${requiredNutritionData.vitaminC} мг"
         findViewById<TextView>(R.id.stat_vit_e).text = "E: ${currentNutritionData.vitaminE}/${requiredNutritionData.vitaminE} мг"
-        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${"%.1f".format(currentNutritionData.vitaminK)}/${requiredNutritionData.vitaminK} мкг"
+        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${currentNutritionData.vitaminK}/${requiredNutritionData.vitaminK} мкг"
 
         // Минералы
         findViewById<TextView>(R.id.stat_k).text = "K: ${currentNutritionData.K}/${requiredNutritionData.K} мг"
@@ -79,7 +79,7 @@ class StatsShow : AppCompatActivity() {
         findViewById<TextView>(R.id.stat_mg).text = "Mg: ${currentNutritionData.Mg}/${requiredNutritionData.Mg} мг"
         findViewById<TextView>(R.id.stat_p).text = "P: ${currentNutritionData.P}/${requiredNutritionData.P} мг"
         findViewById<TextView>(R.id.stat_fe).text = "Fe: ${currentNutritionData.Fe}/${requiredNutritionData.Fe} мг"
-        findViewById<TextView>(R.id.stat_i).text = "I: ${"%.1f".format(currentNutritionData.I)}/${requiredNutritionData.I} мкг"
+        findViewById<TextView>(R.id.stat_i).text = "I: ${currentNutritionData.I}/${requiredNutritionData.I} мкг"
         findViewById<TextView>(R.id.stat_zn).text = "Zn: ${currentNutritionData.Zn}/${requiredNutritionData.Zn} мг"
         findViewById<TextView>(R.id.stat_f).text = "F: ${currentNutritionData.F}/${requiredNutritionData.F} мг"
 
