@@ -1,9 +1,12 @@
 package com.example.rainbowdish
 
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import com.example.mydatabaseapp.models.Recipe
 import com.example.rainbowdish.R
 import com.bumptech.glide.Glide
@@ -42,7 +45,8 @@ class RecipeShowPage : AppCompatActivity() {
         fatTextView.text = "${recipe.fats?.roundToInt()} гр"
         proteinTextView.text = "${recipe.protein?.roundToInt()} гр"
         carbohydratesTextView.text = "${recipe.carbohydrates?.roundToInt()} гр"
-        vesTextView.text = "${recipe.weight.roundToInt()} г"  // Assuming "weight" is the amount, update if needed
+        vesTextView.text =
+            "${recipe.weight.roundToInt()} г"  // Assuming "weight" is the amount, update if needed
         timeTextView.text = "${recipe.timeR ?: "Не указано"}"
 
         // Load the image if it's available (using Glide or any image loading library)
@@ -87,7 +91,7 @@ class RecipeShowPage : AppCompatActivity() {
 
             // Calculate the total nutritional values by multiplying the product's nutritional values by the quantity
             if (product != null) {
-                val quantity =  recipeProduct.quantity / 100
+                val quantity = recipeProduct.quantity / 100
 
                 // Sum the vitamins for the current product
                 totalVitA += product.vitA * quantity
@@ -127,6 +131,78 @@ class RecipeShowPage : AppCompatActivity() {
         findViewById<TextView>(R.id.Mg).text = "Mg: ${"%.1f".format(totalMg)} мг"
         findViewById<TextView>(R.id.I).text = "I: ${"%.1f".format(totalI)} мкг"
 
+        val ingredientList = recipe.ingredients?.split("//") ?: emptyList()
+        val parentLayout = findViewById<LinearLayout>(R.id.ingredients)
+        parentLayout.removeAllViews()
+
+        if (ingredientList.isNotEmpty()) {
+            // Функция для создания строки ингредиентов
+            fun createRow(elements: List<String>): LinearLayout {
+                val rowLayout = LinearLayout(this).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                    gravity = Gravity.CENTER_HORIZONTAL
+                }
+
+                elements.forEach { ingredient ->
+                    val parts = ingredient.split("-")
+                    if (parts.size == 2) {
+                        val name = parts[0].trim()
+                        val quantity = parts[1].trim()
+
+                        // Загружаем layout карточки
+                        val ingredientView = layoutInflater.inflate(R.layout.ingredient_item, rowLayout, false)
+
+                        // Настраиваем данные карточки
+                        val nameTextView = ingredientView.findViewById<TextView>(R.id.ingredient_name)
+                        val quantityTextView = ingredientView.findViewById<TextView>(R.id.ingredient_quantity)
+
+                        nameTextView.text = name
+                        quantityTextView.text = quantity
+
+                        // Добавляем карточку в строку
+                        rowLayout.addView(ingredientView)
+                    }
+                }
+                return rowLayout
+            }
+
+            // Разбиваем список ингредиентов
+            val firstRow = ingredientList.take(4) // Первые 4 элемента
+            val secondRow = ingredientList.drop(4).take(4) // Оставшиеся
+            val thirdRow = ingredientList.drop(8)
+
+            // Создаем первую строку и добавляем в parentLayout
+            val firstRowLayout = createRow(firstRow)
+            parentLayout.addView(firstRowLayout)
+
+            // Если есть элементы для второй строки, добавляем её
+            if (secondRow.isNotEmpty()) {
+                val parentLayout2 = findViewById<LinearLayout>(R.id.ingredients2)
+                val secondRowLayout = createRow(secondRow)
+                parentLayout2.addView(secondRowLayout)
+                //parentLayout.addView(secondRowLayout)
+            }
+
+            if (thirdRow.isNotEmpty()) {
+                val parentLayout3 = findViewById<LinearLayout>(R.id.ingredients3)
+                val thirdRowLayout = createRow(thirdRow)
+                parentLayout3.addView(thirdRowLayout)
+            }
+        }
+
+
+
+
+
+
+
+
 
     }
+
 }
+

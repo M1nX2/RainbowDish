@@ -580,6 +580,7 @@
 
 <!-- Ингридиенты -->
                 <LinearLayout
+                    android:id="@+id/ingredients"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <LinearLayout
@@ -639,6 +640,18 @@
                             />
                     </LinearLayout>
                 </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ingredients2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ingredients3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
 <!-- ИНГРИДИЕНТЫ КОНЧ ИЛИСЬ -->
 
             <LinearLayout
