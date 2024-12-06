@@ -31,7 +31,7 @@ class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout
 
 
 
-        val iconStats = findViewById<ImageView>(R.id.iconStats)
+
         val iconRecipes = findViewById<ImageView>(R.id.iconRecipes)
         // Навешиваем обработчики событий
         buttonParametrs.setOnClickListener {
@@ -45,7 +45,7 @@ class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout
         }
 
         buttonStats.setOnClickListener {
-            iconStats.setImageResource(R.drawable.statistics_active)
+
             navigateTo(context, StatsShow::class.java)
         }
 

@@ -44,6 +44,9 @@ class StatsShow : AppCompatActivity() {
         val imageViewP: ImageView = findViewById(R.id.imageViewOverlay_P)
         val imageViewZn: ImageView = findViewById(R.id.imageViewOverlay_Zn)
 
+        val iconStats = findViewById<ImageView>(R.id.iconStats)
+        iconStats.setImageResource(R.drawable.statistics_active)
+
         val imageViewMap = mapOf(
             "VitA" to imageViewVitA,
             "VitB" to imageViewVitB,

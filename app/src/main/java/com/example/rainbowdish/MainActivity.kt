@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         databaseDAO = DatabaseDAO(this)
 
+        Log.d("DatabaseDAO", databaseDAO.getAllRecords().toString())
+
         databaseDAO.printDatabaseTables()
         val buttonGoToProductAdd: Button = findViewById(R.id.button_go_to_product_add)
         buttonGoToProductAdd.setOnClickListener {
