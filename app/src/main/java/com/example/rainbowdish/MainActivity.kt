@@ -27,19 +27,16 @@ class MainActivity : AppCompatActivity() {
 
         AndroidThreeTen.init(this)
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        setContentView(R.layout.activity_main)
+
 
         databaseDAO = DatabaseDAO(this)
 
         Log.d("DatabaseDAO", databaseDAO.getAllRecords().toString())
 
         databaseDAO.printDatabaseTables()
-        val buttonGoToProductAdd: Button = findViewById(R.id.button_go_to_product_add)
-        buttonGoToProductAdd.setOnClickListener {
-            // Создаем Intent для перехода на экран ProductAdd
-            val intent = Intent(this, ProductsShow::class.java)
-            startActivity(intent)
-        }
+
+        val intent = Intent(this, ParametrsShow::class.java)
+        startActivity(intent)
     }
 
 

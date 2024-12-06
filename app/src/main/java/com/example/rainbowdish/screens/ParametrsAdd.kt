@@ -61,6 +61,18 @@ class ParametrsAdd : AppCompatActivity() {
         goalAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         goalSpinner.adapter = goalAdapter
 
+        val heightClearButton: ImageView = findViewById(R.id.height_clear)
+        heightClearButton.setOnClickListener {
+            val quantityTextView: TextView = findViewById(R.id.height)
+            quantityTextView.setText("")
+        }
+
+        val weightClearButton: ImageView = findViewById(R.id.weight_clear)
+        weightClearButton.setOnClickListener {
+            val quantityTextView: TextView = findViewById(R.id.weight)
+            quantityTextView.setText("")
+        }
+
         // Инициализация базы данных и адаптера
         databaseDAO = DatabaseDAO(this)
         userAdapter = UserAdapter(this)

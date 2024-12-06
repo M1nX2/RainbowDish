@@ -27,7 +27,7 @@
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:queryHint="Введите продукт" />
+            android:queryHint="Введите продукт или рецепт" />
 
 
     </LinearLayout>
