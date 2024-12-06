@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.graphics.Color
+import android.util.TypedValue
 import com.example.mydatabaseapp.models.Recipe
 import com.example.rainbowdish.R
 import com.bumptech.glide.Glide
@@ -19,6 +20,12 @@ class RecipeShowPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recipe_show_page)  // Set the layout
 
+
+        val header: TextView = findViewById(R.id.header_title)
+        header.text = "Рецепты"
+
+        val iconRecipes = findViewById<ImageView>(R.id.iconRecipes)
+        iconRecipes.setImageResource(R.drawable.recipes_active)
         // Get the Recipe object passed via intent (assuming it's passed from another activity)
         val recipe = intent.getParcelableExtra<Recipe>("recipe")
 
@@ -198,9 +205,82 @@ class RecipeShowPage : AppCompatActivity() {
 
 
 
+        val recipeSteps = recipe.descR.split("//") // Разделяем шаги из descR
+        val stepsContainer = findViewById<LinearLayout>(R.id.steps) // Контейнер для шагов
+        stepsContainer.removeAllViews() // Очищаем контейнер перед заполнением
 
+        if (recipeSteps.isNotEmpty()) {
+            // Функция для создания карточки шага
+            fun createStepCard(stepNumber: Int, stepDescription: String): LinearLayout {
+                val stepLayout = LinearLayout(this).apply {
+                    orientation = LinearLayout.VERTICAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(20, 10, 20, 10) // Отступы между шагами
+                    }
+                }
 
+                // Горизонтальный контейнер для номера шага и изображения
+                val headerLayout = LinearLayout(this).apply {
+                    orientation = LinearLayout.HORIZONTAL
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                }
 
+                // Иконка шага
+                val stepIcon = ImageView(this).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
+                    setImageResource(R.drawable.eclipse_step) // Замените на свой ресурс
+                }
+                headerLayout.addView(stepIcon)
+
+                // Номер шага
+                val stepNumberText = TextView(this).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        marginStart = 10 // Отступ от иконки
+                    }
+                    text = "Шаг $stepNumber:"
+                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f) // Размер текста
+                    setTextColor(Color.parseColor("#1A1C15"))
+                }
+                headerLayout.addView(stepNumberText)
+
+                // Добавляем заголовок шага в макет
+                stepLayout.addView(headerLayout)
+
+                // Текст описания шага
+                val stepDescriptionText = TextView(this).apply {
+                    layoutParams = LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    ).apply {
+                        setMargins(30, 5, 10, 10) // Отступы вокруг текста
+                    }
+                    text = stepDescription.trim()
+                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f) // Компактный размер текста
+                    setTextColor(Color.parseColor("#5D6054"))
+                }
+                stepLayout.addView(stepDescriptionText)
+
+                return stepLayout
+            }
+
+            // Добавляем шаги в контейнер
+            recipeSteps.forEachIndexed { index, step ->
+                val stepCard = createStepCard(index + 1, step)
+                stepsContainer.addView(stepCard)
+            }
+        }
 
     }
 
