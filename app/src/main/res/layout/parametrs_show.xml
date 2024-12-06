@@ -214,7 +214,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/pkmnbrfkvs1"
+                    android:id="@+id/pars_vit_a"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -223,7 +223,7 @@
                     android:textSize="@dimen/fontsize_body_medium" />
 
                 <TextView
-                    android:id="@+id/zxfthrsgm63rx831h"
+                    android:id="@+id/pars_vit_b5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -232,7 +232,7 @@
                     android:textSize="@dimen/fontsize_body_medium" />
 
                 <TextView
-                    android:id="@+id/vgykrefydglnxthj"
+                    android:id="@+id/pars_vit_c"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -254,7 +254,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/uyhnrefydglnxthj"
+                    android:id="@+id/pars_vit_b1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -263,7 +263,7 @@
                     android:textSize="@dimen/fontsize_body_medium" />
 
                 <TextView
-                    android:id="@+id/rfkvs1t36aze"
+                    android:id="@+id/pars_vit_b6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -272,7 +272,7 @@
                     android:textSize="@dimen/fontsize_body_medium" />
 
                 <TextView
-                    android:id="@+id/rfvgyrefydglnxthj"
+                    android:id="@+id/pars_vit_e"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -293,7 +293,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/rsgm63rx831h"
+                    android:id="@+id/pars_vit_b2"
                     android:textColor="#1A1C15"
                     android:textSize="@dimen/fontsize_body_medium"
                     android:layout_width="0dp"
@@ -303,7 +303,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/poiuyrefydglnxthj"
+                    android:id="@+id/pars_vit_b9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -312,7 +312,7 @@
                     android:textSize="@dimen/fontsize_body_medium" />
 
                 <TextView
-                    android:id="@+id/rtcu4o4rbr6n"
+                    android:id="@+id/pars_vit_k"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -340,7 +340,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/rfkvs1t36aze1"
+                        android:id="@+id/pars_k"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -349,7 +349,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/rsgm63rx831h1"
+                        android:id="@+id/pars_p"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -358,7 +358,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/refydglnxthj2"
+                        android:id="@+id/pars_zn"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -380,7 +380,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/hgfdrefydglnxthj"
+                        android:id="@+id/pars_ca"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -389,7 +389,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/qwertyrfkvs1t36aze"
+                        android:id="@+id/pars_fe"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
@@ -398,7 +398,7 @@
                         android:textSize="@dimen/fontsize_body_medium" />
 
                     <TextView
-                        android:id="@+id/dkfredfnbvfydgl"
+                        android:id="@+id/pars_f"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -419,7 +419,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/sdcmvrsgm63rx831h"
+                        android:id="@+id/pars_mg"
                         android:textColor="#1A1C15"
                         android:textSize="@dimen/fontsize_body_medium"
                         android:layout_width="0dp"
@@ -429,7 +429,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/zxcvrefydglnxthj"
+                        android:id="@+id/pars_i"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
@@ -486,7 +486,7 @@
                             android:layout_weight="1" />
 
                         <TextView
-                            android:id="@+id/rfe0b90yugfj"
+                            android:id="@+id/pars_kcal_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1900/2100"
@@ -495,7 +495,7 @@
                     </LinearLayout>
 
                     <ProgressBar
-                        android:id="@+id/progressBar2"
+                        android:id="@+id/pars_kcal_progressBar"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -537,7 +537,7 @@
                             android:text="Белки"
                             />
                         <TextView
-                            android:id="@+id/razwl7pmsdf"
+                            android:id="@+id/pars_protein_text"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_label_medium"
                             android:layout_height="wrap_content"
@@ -547,7 +547,7 @@
                     </LinearLayout>
 
                     <ProgressBar
-                        android:id="@+id/progressBar7"
+                        android:id="@+id/pars_protein_progressBar"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -593,7 +593,7 @@
                             android:text="Жиры"
                             />
                         <TextView
-                            android:id="@+id/r8yrgsdvjmzc"
+                            android:id="@+id/pars_fats_text"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_label_medium"
                             android:layout_height="wrap_content"
@@ -603,7 +603,7 @@
                     </LinearLayout>
 
                     <ProgressBar
-                        android:id="@+id/progressBar3"
+                        android:id="@+id/pars_fats_progressBar"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -646,7 +646,7 @@
                             android:layout_weight="1"
                             />
                         <TextView
-                            android:id="@+id/r1jmxok68dqy"
+                            android:id="@+id/pars_carbs_text"
                             android:textColor="#1A1C15"
                             android:textSize="@dimen/fontsize_label_medium"
                             android:layout_height="wrap_content"
@@ -656,7 +656,7 @@
                     </LinearLayout>
 
                     <ProgressBar
-                        android:id="@+id/progressBar5"
+                        android:id="@+id/pars_carbs_progressBar"
                         style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
