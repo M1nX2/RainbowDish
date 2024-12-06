@@ -88,32 +88,52 @@ class DatabaseDAO(context: Context) {
     fun getAllRecipes(): List<Recipe> {
         val recipes = mutableListOf<Recipe>()
         val db = dbHelper.readableDatabase
+
+        // Загружаем все рецепты
         val cursor: Cursor = db.rawQuery("SELECT * FROM Recipe", null)
 
         if (cursor.moveToFirst()) {
             do {
+                val recipeId = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Pecipe"))
                 val recipe = Recipe(
-                    idRecipe = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Pecipe")),
+                    idRecipe = recipeId,
                     nameR = cursor.getString(cursor.getColumnIndexOrThrow("Name_R")),
                     timeR = cursor.getString(cursor.getColumnIndexOrThrow("Time_R")),  // может быть null
                     descR = cursor.getString(cursor.getColumnIndexOrThrow("Desc_R")),
                     weight = cursor.getDouble(cursor.getColumnIndexOrThrow("Weight")),
-                    portions = cursor.getInt(cursor.getColumnIndexOrThrow("Portions"))
+                    portions = cursor.getInt(cursor.getColumnIndexOrThrow("Portions")),
+                    recipeIMG = cursor.getString(cursor.getColumnIndexOrThrow("RecipeIMG")),
+                    ingredients = cursor.getString(cursor.getColumnIndexOrThrow("Ingr")),
+                    kcal = cursor.getDouble(cursor.getColumnIndexOrThrow("Kcal")),
+                    protein = cursor.getDouble(cursor.getColumnIndexOrThrow("Protein")),
+                    fats = cursor.getDouble(cursor.getColumnIndexOrThrow("Fats")),
+                    carbohydrates = cursor.getDouble(cursor.getColumnIndexOrThrow("Carbonhydrates"))
                 )
+
+                // Получаем продукты для данного рецепта
+                val recipeProducts = getRecipeProductsForRecipe(recipeId)
+
+                // Добавляем продукты в рецепт
+                recipe.products = recipeProducts
+
+                // Добавляем рецепт в список
                 recipes.add(recipe)
+
             } while (cursor.moveToNext())
         }
         cursor.close()
         db.close()
+
         return recipes
     }
 
-
-    // Получение всех записей из таблицы Recipe_Product
-    fun getAllRecipeProducts(): List<RecipeProduct> {
+    // Метод для получения продуктов для рецепта
+    fun getRecipeProductsForRecipe(recipeId: Int): List<RecipeProduct> {
         val recipeProducts = mutableListOf<RecipeProduct>()
         val db = dbHelper.readableDatabase
-        val cursor: Cursor = db.rawQuery("SELECT * FROM Recipe_Product", null)
+
+        // Запрос для получения продуктов для рецепта
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Recipe_Product WHERE Recipe_ID = ?", arrayOf(recipeId.toString()))
 
         if (cursor.moveToFirst()) {
             do {
@@ -128,8 +148,11 @@ class DatabaseDAO(context: Context) {
         }
         cursor.close()
         db.close()
+
         return recipeProducts
     }
+
+
 
     // Получение всех записей из таблицы Record
     fun getAllRecords(): List<Record> {
