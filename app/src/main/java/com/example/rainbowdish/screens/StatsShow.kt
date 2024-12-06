@@ -1,11 +1,13 @@
 package com.example.rainbowdish.screens
 
+import android.os.Build
 import android.os.Bundle
 import org.threeten.bp.LocalDate
 import org.threeten.bp.DayOfWeek
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rainbowdish.adapters.WeeklyNutritionAdapter// чето я не поняла че к чему че не так
 import com.example.mydatabaseapp.adapters.NutritionData
@@ -13,6 +15,7 @@ import com.example.mydatabaseapp.models.User
 import com.example.rainbowdish.R
 import com.example.rainbowdish.adapters.UserAdapter
 import androidx.core.content.ContextCompat
+import org.threeten.bp.format.DateTimeFormatter
 
 
 class StatsShow : AppCompatActivity() {
@@ -26,6 +29,7 @@ class StatsShow : AppCompatActivity() {
     private lateinit var dailyNutritionData: NutritionData
     private lateinit var requiredNutritionData: NutritionData
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.statistics)
@@ -202,6 +206,7 @@ class StatsShow : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun getCurrentWeekRange(today: LocalDate = LocalDate.now()): String {
 
         // Вычисляем дату понедельника текущей недели

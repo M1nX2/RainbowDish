@@ -65,7 +65,8 @@ dependencies {
     implementation("androidx.room:room-runtime:2.5.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.8.4")
-    implementation("androidx.navigation:navigation-ui-ktx:2.8.4") // Зависимость для работы с Room
+    implementation("androidx.navigation:navigation-ui-ktx:2.8.4")
+    implementation("androidx.core:core-i18n:1.0.0-alpha01") // Зависимость для работы с Room
     kapt("androidx.room:room-compiler:2.5.0") // Компилятор аннотаций для Room
 
     implementation("com.github.bumptech.glide:glide:4.15.1") // Замените на актуальную версию, если появилась новая
