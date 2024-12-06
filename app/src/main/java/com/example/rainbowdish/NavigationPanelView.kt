@@ -8,9 +8,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.LinearLayout
+import com.example.rainbowdish.screens.StatsShow
 import com.example.rainbowdish.screens.ParametrsShow
 import com.example.rainbowdish.screens.ProductsShow
-import com.example.rainbowdish.screens.StatsShow
 import com.example.rainbowdish.screens.RecipesShow
 
 class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
@@ -53,6 +53,7 @@ class NavigationPanelView(context: Context, attrs: AttributeSet?) : LinearLayout
             iconRecipes.setImageResource(R.drawable.recipes_active)
             navigateTo(context, RecipesShow::class.java)
         }
+
     }
 
     private fun navigateTo(context: Context, destinationClass: Class<*>) {

@@ -112,85 +112,85 @@
                     android:id="@+id/imageViewBackground"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerDEF" />
+                    android:src="@drawable/flower_def" />
 
                 <ImageView
                     android:id="@+id/imageViewOverlay_Ca"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerCa"
+                    android:src="@drawable/flower_ca"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_F"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerF"
+                    android:src="@drawable/flower_f"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_Fe"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerFe"
+                    android:src="@drawable/flower_fe"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_I"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerI"
+                    android:src="@drawable/flower_i"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_K"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerK"
+                    android:src="@drawable/flower_k"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_Mg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerMg"
+                    android:src="@drawable/flower_mg"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_P"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerP"
+                    android:src="@drawable/flower_p"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_VitA"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerVitA"
+                    android:src="@drawable/flower_vit_a"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_VitB"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerVitB"
+                    android:src="@drawable/flower_vit_b"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_VitC"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerVitC"
+                    android:src="@drawable/flower_vit_c"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_VitE"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerVitE"
+                    android:src="@drawable/flower_vit_e"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_VitK"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerVitK"
+                    android:src="@drawable/flower_vit_k"
                     android:alpha="0" />
                 <ImageView
                     android:id="@+id/imageViewOverlay_Zn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/flowerZn"
+                    android:src="@drawable/flower_zn"
                     android:alpha="0" />
             </FrameLayout>
 
