@@ -113,9 +113,6 @@ class DatabaseDAO(context: Context) {
                 // Получаем продукты для данного рецепта
                 val recipeProducts = getRecipeProductsForRecipe(recipeId)
 
-                // Добавляем продукты в рецепт
-                recipe.products = recipeProducts
-
                 // Добавляем рецепт в список
                 recipes.add(recipe)
 
@@ -281,6 +278,51 @@ class DatabaseDAO(context: Context) {
         db.close()
 
         return rowsUpdated // Возвращаем количество обновленных строк (обычно будет 1 или 0)
+    }
+    fun getProductById(productId: Int): Product? {
+        val db = dbHelper.readableDatabase
+        var product: Product? = null
+
+        // Запрос для получения продукта по ID
+        val cursor: Cursor = db.rawQuery(
+            "SELECT * FROM Product WHERE ID_Product = ?",
+            arrayOf(productId.toString())
+        )
+
+        if (cursor.moveToFirst()) {
+            product = Product(
+                idProduct = cursor.getInt(cursor.getColumnIndexOrThrow("ID_Product")),
+                productName = cursor.getString(cursor.getColumnIndexOrThrow("Product_Name")),
+                kcal = cursor.getDouble(cursor.getColumnIndexOrThrow("Kcal")),
+                protein = cursor.getDouble(cursor.getColumnIndexOrThrow("Protein")),
+                fat = cursor.getDouble(cursor.getColumnIndexOrThrow("Fat")),
+                carbohydrates = cursor.getDouble(cursor.getColumnIndexOrThrow("Carbonhydrates")),
+                vitA = cursor.getDouble(cursor.getColumnIndexOrThrow("VitA")),
+                vitB1 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB1")),
+                vitB2 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB2")),
+                vitB5 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB5")),
+                vitB6 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB6")),
+                vitB9 = cursor.getDouble(cursor.getColumnIndexOrThrow("VitB9")),
+                vitC = cursor.getDouble(cursor.getColumnIndexOrThrow("VitC")),
+                vitE = cursor.getDouble(cursor.getColumnIndexOrThrow("VitE")),
+                vitK = cursor.getDouble(cursor.getColumnIndexOrThrow("VitK")),
+                k = cursor.getDouble(cursor.getColumnIndexOrThrow("K")),
+                ca = cursor.getDouble(cursor.getColumnIndexOrThrow("Ca")),
+                mg = cursor.getDouble(cursor.getColumnIndexOrThrow("Mg")),
+                p = cursor.getDouble(cursor.getColumnIndexOrThrow("P")),
+                fe = cursor.getDouble(cursor.getColumnIndexOrThrow("Fe")),
+                i = cursor.getDouble(cursor.getColumnIndexOrThrow("I")),
+                zn = cursor.getDouble(cursor.getColumnIndexOrThrow("Zn")),
+                f = cursor.getDouble(cursor.getColumnIndexOrThrow("F")),
+                avgWeight = cursor.getDouble(cursor.getColumnIndexOrThrow("AVGWeight")),
+                productImg = cursor.getString(cursor.getColumnIndexOrThrow("ProductIMG"))
+            )
+        }
+
+        cursor.close()
+        db.close()
+
+        return product
     }
 
 }

@@ -33,6 +33,9 @@
             tools:ignore="Instantiatable" />
         <activity android:name=".screens.RecipesShow"
             tools:ignore="Instantiatable" />
+        <activity android:name=".RecipeShowPage">
+            <!-- Optional: Intent filters, launch mode, etc. -->
+        </activity>
         <activity android:name=".screens.ProductAdd" />
         <activity android:name=".screens.ParametrsAdd" />
     </application>
