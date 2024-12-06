@@ -20,6 +20,7 @@ class StatsShow : AppCompatActivity() {
 
     private lateinit var userAdapter: UserAdapter
     private lateinit var  user: User
+    private lateinit var dailyNutritionData: NutritionData
     private lateinit var requiredNutritionData: NutritionData
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,8 @@ class StatsShow : AppCompatActivity() {
         currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition()
         userAdapter = UserAdapter(this)
         user = userAdapter.getItem(0)
-        requiredNutritionData = NutritionData.calculateNutrition(user)
+        dailyNutritionData = NutritionData.calculateNutrition(user)
+        requiredNutritionData = NutritionData.calculateWeeklyNutrition(dailyNutritionData)
 
         val imageViewVitA: ImageView = findViewById(R.id.imageViewOverlay_VitA)
         val imageViewVitB: ImageView = findViewById(R.id.imageViewOverlay_VitB)

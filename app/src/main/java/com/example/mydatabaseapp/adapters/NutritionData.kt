@@ -119,6 +119,31 @@ companion object {
             F = F.roundToInt()
         )
     }
+    fun calculateWeeklyNutrition(dailyNutrition: NutritionData): NutritionData {
+        return NutritionData(
+            calories = dailyNutrition.calories * 7,
+            protein = dailyNutrition.protein * 7,
+            fat = dailyNutrition.fat * 7,
+            carbs = dailyNutrition.carbs * 7,
+            vitaminA = dailyNutrition.vitaminA * 7,
+            vitaminB1 = dailyNutrition.vitaminB1 * 7,
+            vitaminB2 = dailyNutrition.vitaminB2 * 7,
+            vitaminB5 = dailyNutrition.vitaminB5 * 7,
+            vitaminB6 = dailyNutrition.vitaminB6 * 7,
+            vitaminB9 = dailyNutrition.vitaminB9 * 7,
+            vitaminC = dailyNutrition.vitaminC * 7,
+            vitaminE = dailyNutrition.vitaminE * 7,
+            vitaminK = dailyNutrition.vitaminK * 7,
+            K = dailyNutrition.K * 7,
+            Ca = dailyNutrition.Ca * 7,
+            Mg = dailyNutrition.Mg * 7,
+            P = dailyNutrition.P * 7,
+            Fe = dailyNutrition.Fe * 7,
+            I = dailyNutrition.I * 7,
+            Zn = dailyNutrition.Zn * 7,
+            F = dailyNutrition.F * 7
+        )
+    }
 }
 }
 
