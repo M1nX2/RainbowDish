@@ -3,17 +3,21 @@ package com.example.rainbowdish.screens
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mydatabaseapp.adapters.WeeklyNutritionAdapter // чето я не поняла че к чему че не так
+import com.example.rainbowdish.adapters.WeeklyNutritionAdapter// чето я не поняла че к чему че не так
 import com.example.mydatabaseapp.adapters.NutritionData
 import com.example.mydatabaseapp.dao.DatabaseDAO
 import com.example.rainbowdish.R
-import com.example.rainbowdish.adapters.WeeklyNutritionAdapter
+import com.example.rainbowdish.adapters.UserAdapter
 
 
 class ColorBookStats : AppCompatActivity() {
 
-    private val currentNutritionData: NutritionData = WeeklyNutritionAdapter.calculateWeeklyNutrition()
-    private val requiredNutritionData: NutritionData = NutritionData.calculateNutrition()
+    private val weeklyNutritionAdapter: WeeklyNutritionAdapter = WeeklyNutritionAdapter(this)
+    private val currentNutritionData: NutritionData = weeklyNutritionAdapter.calculateWeeklyNutrition()
+
+    val userAdapter = UserAdapter(this)
+    val user = userAdapter.getItem(0)
+    private val requiredNutritionData: NutritionData = NutritionData.calculateNutrition(user)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
