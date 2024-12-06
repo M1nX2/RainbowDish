@@ -2,6 +2,7 @@ package com.example.rainbowdish.screens
 
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.rainbowdish.adapters.WeeklyNutritionAdapter// чето я не поняла че к чему че не так
@@ -47,6 +48,42 @@ class StatsShow : AppCompatActivity() {
         val imageViewMg: ImageView = findViewById(R.id.imageViewOverlay_Mg)
         val imageViewP: ImageView = findViewById(R.id.imageViewOverlay_P)
         val imageViewZn: ImageView = findViewById(R.id.imageViewOverlay_Zn)
+
+        //витаминс
+        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${currentNutritionData.vitaminA} / ${requiredNutritionData.vitaminA} мкг"
+        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${currentNutritionData.vitaminB1} / ${requiredNutritionData.vitaminB1} мг"
+        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${currentNutritionData.vitaminB2} / ${requiredNutritionData.vitaminB2} мг"
+        findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${currentNutritionData.vitaminB5} / ${requiredNutritionData.vitaminB5} мг"
+        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${currentNutritionData.vitaminB6} / ${requiredNutritionData.vitaminB6} мг"
+        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${currentNutritionData.vitaminB9} / ${requiredNutritionData.vitaminB9} мкг"
+        findViewById<TextView>(R.id.stat_vit_c).text = "C: ${currentNutritionData.vitaminC} / ${requiredNutritionData.vitaminC} мг"
+        findViewById<TextView>(R.id.stat_vit_e).text = "E: ${currentNutritionData.vitaminE} / ${requiredNutritionData.vitaminE} мг"
+        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${currentNutritionData.vitaminK} / ${requiredNutritionData.vitaminK} мкг"
+
+        // Минералы
+        findViewById<TextView>(R.id.stat_k).text = "K: ${currentNutritionData.K} / ${requiredNutritionData.K} мг"
+        findViewById<TextView>(R.id.stat_ca).text = "Ca: ${currentNutritionData.Ca} / ${requiredNutritionData.Ca} мг"
+        findViewById<TextView>(R.id.stat_mg).text = "Mg: ${currentNutritionData.Mg} / ${requiredNutritionData.Mg} мг"
+        findViewById<TextView>(R.id.stat_p).text = "P: ${currentNutritionData.P} / ${requiredNutritionData.P} мг"
+        findViewById<TextView>(R.id.stat_fe).text = "Fe: ${currentNutritionData.Fe} / ${requiredNutritionData.Fe} мг"
+        findViewById<TextView>(R.id.stat_i).text = "I: ${currentNutritionData.I} / ${requiredNutritionData.I} мкг"
+        findViewById<TextView>(R.id.stat_zn).text = "Zn: ${currentNutritionData.Zn} / ${requiredNutritionData.Zn} мг"
+        findViewById<TextView>(R.id.stat_f).text = "F: ${currentNutritionData.F} / ${requiredNutritionData.F} мг"
+
+        val kcalProgressBar: ProgressBar = findViewById(R.id.stat_kcal_progressBar)
+        val proteinProgressBar: ProgressBar = findViewById(R.id.stat_protein_progressBar)
+        val fatsProgressBar: ProgressBar = findViewById(R.id.stat_fats_progressBar)
+        val carbsProgressBar: ProgressBar = findViewById(R.id.stat_carbs_progressBar)
+
+        kcalProgressBar.max = requiredNutritionData.calories
+        proteinProgressBar.max = requiredNutritionData.protein
+        fatsProgressBar.max = requiredNutritionData.fat
+        carbsProgressBar.max = requiredNutritionData.carbs
+
+        kcalProgressBar.progress = currentNutritionData.calories
+        proteinProgressBar.progress = currentNutritionData.protein
+        fatsProgressBar.progress = currentNutritionData.fat
+        carbsProgressBar.progress = currentNutritionData.carbs
 
         val iconStats = findViewById<ImageView>(R.id.iconStats)
         iconStats.setImageResource(R.drawable.statistics_active)
