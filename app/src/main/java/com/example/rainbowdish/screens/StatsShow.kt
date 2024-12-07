@@ -38,7 +38,7 @@ class StatsShow : AppCompatActivity() {
         header.text = "Статистика"
 
         //устанавливаю дату
-        val today = LocalDate.now()
+        var today = LocalDate.now()
         val date_text: String = getCurrentWeekRange()
         findViewById<TextView>(R.id.date_textView).text = date_text
 
@@ -86,6 +86,27 @@ class StatsShow : AppCompatActivity() {
             currentNutritionData: NutritionData,
             requiredNutritionData: NutritionData
         ) {
+            //витаминс
+            findViewById<TextView>(R.id.stat_vit_a).text = "A: ${currentNutritionData.vitaminA}/${requiredNutritionData.vitaminA} мкг"
+            findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${"%.1f".format(requiredNutritionData.vitaminB1)} мг"
+            findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${"%.1f".format(requiredNutritionData.vitaminB2)} мг"
+            findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${currentNutritionData.vitaminB5}/${requiredNutritionData.vitaminB5} мг"
+            findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${"%.1f".format(requiredNutritionData.vitaminB6)} мг"
+            findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${currentNutritionData.vitaminB9}/${requiredNutritionData.vitaminB9} мкг"
+            findViewById<TextView>(R.id.stat_vit_c).text = "C: ${currentNutritionData.vitaminC}/${requiredNutritionData.vitaminC} мг"
+            findViewById<TextView>(R.id.stat_vit_e).text = "E: ${currentNutritionData.vitaminE}/${requiredNutritionData.vitaminE} мг"
+            findViewById<TextView>(R.id.stat_vit_k).text = "K: ${currentNutritionData.vitaminK}/${requiredNutritionData.vitaminK} мкг"
+
+            // Минералы
+            findViewById<TextView>(R.id.stat_k).text = "K: ${currentNutritionData.K}/${requiredNutritionData.K} мг"
+            findViewById<TextView>(R.id.stat_ca).text = "Ca: ${currentNutritionData.Ca}/${requiredNutritionData.Ca} мг"
+            findViewById<TextView>(R.id.stat_mg).text = "Mg: ${currentNutritionData.Mg}/${requiredNutritionData.Mg} мг"
+            findViewById<TextView>(R.id.stat_p).text = "P: ${currentNutritionData.P}/${requiredNutritionData.P} мг"
+            findViewById<TextView>(R.id.stat_fe).text = "Fe: ${currentNutritionData.Fe}/${requiredNutritionData.Fe} мг"
+            findViewById<TextView>(R.id.stat_i).text = "I: ${currentNutritionData.I}/${requiredNutritionData.I} мкг"
+            findViewById<TextView>(R.id.stat_zn).text = "Zn: ${currentNutritionData.Zn}/${requiredNutritionData.Zn} мг"
+            findViewById<TextView>(R.id.stat_f).text = "F: ${currentNutritionData.F}/${requiredNutritionData.F} мг"
+
             // Привязка ProgressBar и TextView
             val kcalProgressBar: ProgressBar = findViewById(R.id.stat_kcal_progressBar)
             val proteinProgressBar: ProgressBar = findViewById(R.id.stat_protein_progressBar)
@@ -134,6 +155,7 @@ class StatsShow : AppCompatActivity() {
 
             // Вычисляем дату неделю назад
             val weekAgo = today.minusDays(7)
+            today = weekAgo
             // Вызываем вашу функцию с датой неделю назад
             currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition(weekAgo)
             val date_text: String = getCurrentWeekRange(weekAgo)
@@ -146,6 +168,7 @@ class StatsShow : AppCompatActivity() {
 
             // Вычисляем дату неделю назад
             val weekAdvance = today.plusDays(7)
+            today = weekAdvance
             // Вызываем вашу функцию с датой неделю назад
             currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition(weekAdvance)
             val date_text: String = getCurrentWeekRange(weekAdvance)
