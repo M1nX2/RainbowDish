@@ -1,5 +1,6 @@
 package com.example.rainbowdish.screens
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import org.threeten.bp.LocalDate
@@ -36,6 +37,14 @@ class StatsShow : AppCompatActivity() {
 
         val header: TextView = findViewById(R.id.header_title)
         header.text = "Статистика"
+        userAdapter = UserAdapter(this)
+        if (!userAdapter.hasUsers()) {
+            // Если пользователей нет, открываем экран ParametrsAdd
+            val intent = Intent(this, ParametrsAdd::class.java)
+            startActivity(intent)
+            finish() // Завершаем текущую активность
+            return
+        }
 
         //устанавливаю дату
         var today = LocalDate.now()
@@ -44,7 +53,7 @@ class StatsShow : AppCompatActivity() {
 
         weeklyNutritionAdapter = WeeklyNutritionAdapter(this)
         currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition()
-        userAdapter = UserAdapter(this)
+
         user = userAdapter.getItem(0)
         dailyNutritionData = NutritionData.calculateNutrition(user)
         requiredNutritionData = NutritionData.calculateWeeklyNutrition(dailyNutritionData)
