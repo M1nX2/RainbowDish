@@ -38,6 +38,7 @@ class StatsShow : AppCompatActivity() {
         header.text = "Статистика"
 
         //устанавливаю дату
+        val today = LocalDate.now()
         val date_text: String = getCurrentWeekRange()
         findViewById<TextView>(R.id.date_textView).text = date_text
 
@@ -47,6 +48,7 @@ class StatsShow : AppCompatActivity() {
         user = userAdapter.getItem(0)
         dailyNutritionData = NutritionData.calculateNutrition(user)
         requiredNutritionData = NutritionData.calculateWeeklyNutrition(dailyNutritionData)
+
 
         val imageViewVitA: ImageView = findViewById(R.id.imageViewOverlay_VitA)
         val imageViewVitB: ImageView = findViewById(R.id.imageViewOverlay_VitB)
@@ -61,69 +63,6 @@ class StatsShow : AppCompatActivity() {
         val imageViewMg: ImageView = findViewById(R.id.imageViewOverlay_Mg)
         val imageViewP: ImageView = findViewById(R.id.imageViewOverlay_P)
         val imageViewZn: ImageView = findViewById(R.id.imageViewOverlay_Zn)
-
-        //витаминс
-        findViewById<TextView>(R.id.stat_vit_a).text = "A: ${currentNutritionData.vitaminA}/${requiredNutritionData.vitaminA} мкг"
-        findViewById<TextView>(R.id.stat_bit_b1).text = "B1: ${"%.1f".format(currentNutritionData.vitaminB1)}/${"%.1f".format(requiredNutritionData.vitaminB1)} мг"
-        findViewById<TextView>(R.id.stat_vit_b2).text = "B2: ${"%.1f".format(currentNutritionData.vitaminB2)}/${"%.1f".format(requiredNutritionData.vitaminB2)} мг"
-        findViewById<TextView>(R.id.stat_vit_b5).text = "B5: ${currentNutritionData.vitaminB5}/${requiredNutritionData.vitaminB5} мг"
-        findViewById<TextView>(R.id.stat_vit_b6).text = "B6: ${"%.1f".format(currentNutritionData.vitaminB6)}/${"%.1f".format(requiredNutritionData.vitaminB6)} мг"
-        findViewById<TextView>(R.id.stat_vit_b9).text = "B9: ${currentNutritionData.vitaminB9}/${requiredNutritionData.vitaminB9} мкг"
-        findViewById<TextView>(R.id.stat_vit_c).text = "C: ${currentNutritionData.vitaminC}/${requiredNutritionData.vitaminC} мг"
-        findViewById<TextView>(R.id.stat_vit_e).text = "E: ${currentNutritionData.vitaminE}/${requiredNutritionData.vitaminE} мг"
-        findViewById<TextView>(R.id.stat_vit_k).text = "K: ${currentNutritionData.vitaminK}/${requiredNutritionData.vitaminK} мкг"
-
-        // Минералы
-        findViewById<TextView>(R.id.stat_k).text = "K: ${currentNutritionData.K}/${requiredNutritionData.K} мг"
-        findViewById<TextView>(R.id.stat_ca).text = "Ca: ${currentNutritionData.Ca}/${requiredNutritionData.Ca} мг"
-        findViewById<TextView>(R.id.stat_mg).text = "Mg: ${currentNutritionData.Mg}/${requiredNutritionData.Mg} мг"
-        findViewById<TextView>(R.id.stat_p).text = "P: ${currentNutritionData.P}/${requiredNutritionData.P} мг"
-        findViewById<TextView>(R.id.stat_fe).text = "Fe: ${currentNutritionData.Fe}/${requiredNutritionData.Fe} мг"
-        findViewById<TextView>(R.id.stat_i).text = "I: ${currentNutritionData.I}/${requiredNutritionData.I} мкг"
-        findViewById<TextView>(R.id.stat_zn).text = "Zn: ${currentNutritionData.Zn}/${requiredNutritionData.Zn} мг"
-        findViewById<TextView>(R.id.stat_f).text = "F: ${currentNutritionData.F}/${requiredNutritionData.F} мг"
-
-        val kcalProgressBar: ProgressBar = findViewById(R.id.stat_kcal_progressBar)
-        val proteinProgressBar: ProgressBar = findViewById(R.id.stat_protein_progressBar)
-        val fatsProgressBar: ProgressBar = findViewById(R.id.stat_fats_progressBar)
-        val carbsProgressBar: ProgressBar = findViewById(R.id.stat_carbs_progressBar)
-
-        findViewById<TextView>(R.id.stats_kcal_text).text = "${currentNutritionData.calories}/${requiredNutritionData.calories}"
-        findViewById<TextView>(R.id.stats_protein_text).text = "${currentNutritionData.protein}/${requiredNutritionData.protein}"
-        findViewById<TextView>(R.id.stats_fats_text).text = "${currentNutritionData.fat}/${requiredNutritionData.fat}"
-        findViewById<TextView>(R.id.stats_carbs_text).text = "${currentNutritionData.carbs}/${requiredNutritionData.carbs}"
-
-        kcalProgressBar.max = requiredNutritionData.calories
-        proteinProgressBar.max = requiredNutritionData.protein
-        fatsProgressBar.max = requiredNutritionData.fat
-        carbsProgressBar.max = requiredNutritionData.carbs
-
-        kcalProgressBar.progress = currentNutritionData.calories
-        proteinProgressBar.progress = currentNutritionData.protein
-        fatsProgressBar.progress = currentNutritionData.fat
-        carbsProgressBar.progress = currentNutritionData.carbs
-
-        val progressBarList: List<Pair<ProgressBar, Int>> = listOf(
-            Pair(kcalProgressBar, currentNutritionData.calories),
-            Pair(proteinProgressBar, currentNutritionData.protein),
-            Pair(fatsProgressBar, currentNutritionData.fat),
-            Pair(carbsProgressBar, currentNutritionData.carbs)
-        )
-
-        progressBarList.forEach { (progressBar, value) ->
-            val percentage = value.toFloat() / progressBar.max * 100
-
-            val drawableRes = when {
-                percentage <= 30 -> R.drawable.progress_red
-                percentage <= 60 -> R.drawable.progress_yellow
-                else -> R.drawable.progress_green
-            }
-            progressBar.progress = value
-            progressBar.progressDrawable = ContextCompat.getDrawable(progressBar.context, drawableRes)
-        }
-
-        val iconStats = findViewById<ImageView>(R.id.iconStats)
-        iconStats.setImageResource(R.drawable.statistics_active)
 
         val imageViewMap = mapOf(
             "VitA" to imageViewVitA,
@@ -141,7 +80,79 @@ class StatsShow : AppCompatActivity() {
             "Zn" to imageViewZn
         )
 
+
+        //женя прости что функция внутри
+        fun updateProgressBars(
+            currentNutritionData: NutritionData,
+            requiredNutritionData: NutritionData
+        ) {
+            // Привязка ProgressBar и TextView
+            val kcalProgressBar: ProgressBar = findViewById(R.id.stat_kcal_progressBar)
+            val proteinProgressBar: ProgressBar = findViewById(R.id.stat_protein_progressBar)
+            val fatsProgressBar: ProgressBar = findViewById(R.id.stat_fats_progressBar)
+            val carbsProgressBar: ProgressBar = findViewById(R.id.stat_carbs_progressBar)
+
+            findViewById<TextView>(R.id.stats_kcal_text).text = "${currentNutritionData.calories}/${requiredNutritionData.calories}"
+            findViewById<TextView>(R.id.stats_protein_text).text = "${currentNutritionData.protein}/${requiredNutritionData.protein}"
+            findViewById<TextView>(R.id.stats_fats_text).text = "${currentNutritionData.fat}/${requiredNutritionData.fat}"
+            findViewById<TextView>(R.id.stats_carbs_text).text = "${currentNutritionData.carbs}/${requiredNutritionData.carbs}"
+
+            // Установка максимальных значений
+            kcalProgressBar.max = requiredNutritionData.calories
+            proteinProgressBar.max = requiredNutritionData.protein
+            fatsProgressBar.max = requiredNutritionData.fat
+            carbsProgressBar.max = requiredNutritionData.carbs
+
+            // Установка прогресса
+            val progressBarList: List<Pair<ProgressBar, Int>> = listOf(
+                Pair(kcalProgressBar, currentNutritionData.calories),
+                Pair(proteinProgressBar, currentNutritionData.protein),
+                Pair(fatsProgressBar, currentNutritionData.fat),
+                Pair(carbsProgressBar, currentNutritionData.carbs)
+            )
+
+            progressBarList.forEach { (progressBar, value) ->
+                val percentage = value.toFloat() / progressBar.max * 100
+
+                val drawableRes = when {
+                    percentage <= 30 -> R.drawable.progress_red
+                    percentage <= 60 -> R.drawable.progress_yellow
+                    else -> R.drawable.progress_green
+                }
+                progressBar.progress = value
+                progressBar.progressDrawable = ContextCompat.getDrawable(progressBar.context, drawableRes)
+            }
+        }
+
+        val iconStats = findViewById<ImageView>(R.id.iconStats)
+        iconStats.setImageResource(R.drawable.statistics_active)
+
         updateAllImageViewsVisibility(currentNutritionData, requiredNutritionData, imageViewMap)
+        updateProgressBars(currentNutritionData, requiredNutritionData)
+
+        findViewById<ImageView>(R.id.strelka_nazad_kalendar).setOnClickListener {
+
+            // Вычисляем дату неделю назад
+            val weekAgo = today.minusDays(7)
+            // Вызываем вашу функцию с датой неделю назад
+            currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition(weekAgo)
+            val date_text: String = getCurrentWeekRange(weekAgo)
+            findViewById<TextView>(R.id.date_textView).text = date_text
+            updateAllImageViewsVisibility(currentNutritionData, requiredNutritionData, imageViewMap)
+            updateProgressBars(currentNutritionData, requiredNutritionData)
+        }
+
+        findViewById<ImageView>(R.id.strelka_vpered_kalendar).setOnClickListener {
+
+            // Вычисляем дату неделю назад
+            val weekAdvance = today.plusDays(7)
+            // Вызываем вашу функцию с датой неделю назад
+            currentNutritionData =  weeklyNutritionAdapter.calculateWeeklyNutrition(weekAdvance)
+            val date_text: String = getCurrentWeekRange(weekAdvance)
+            findViewById<TextView>(R.id.date_textView).text = date_text
+            updateAllImageViewsVisibility(currentNutritionData, requiredNutritionData, imageViewMap)
+            updateProgressBars(currentNutritionData, requiredNutritionData)
+        }
     }
 
     // Витамины B

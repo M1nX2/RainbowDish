@@ -60,7 +60,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/rm9mrsdtlrnj"
+                            android:id="@+id/strelka_nazad_kalendar"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/strelka_nazad_kalendar"
@@ -93,7 +93,7 @@
                         android:clipToPadding="false"
                         android:orientation="vertical">
                         <ImageView
-                            android:id="@+id/rf1n2kk0ls77"
+                            android:id="@+id/strelka_vpered_kalendar"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/strelka_vpered_kalendar"
