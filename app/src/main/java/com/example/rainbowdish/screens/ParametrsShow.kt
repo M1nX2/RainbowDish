@@ -36,10 +36,6 @@ class ParametrsShow : AppCompatActivity() {
         userAdapter = UserAdapter(this)
         weeklyNutritionAdapter = WeeklyNutritionAdapter(this)
         currentNutritionData =  weeklyNutritionAdapter.calculateDailyNutrition()
-        user = userAdapter.getItem(0)
-        requiredNutritionData = NutritionData.calculateNutrition(user)
-
-        // Проверяем, есть ли хотя бы один пользователь
         if (!userAdapter.hasUsers()) {
             // Если пользователей нет, открываем экран ParametrsAdd
             val intent = Intent(this, ParametrsAdd::class.java)
@@ -47,6 +43,11 @@ class ParametrsShow : AppCompatActivity() {
             finish() // Завершаем текущую активность
             return
         }
+        user = userAdapter.getItem(0)
+        requiredNutritionData = NutritionData.calculateNutrition(user)
+
+        // Проверяем, есть ли хотя бы один пользователь
+
 
         // Если есть пользователи, продолжаем с текущим экраном
         setContentView(R.layout.parametrs_show)
