@@ -24,6 +24,11 @@ class RecipeShowPage : AppCompatActivity() {
         val header: TextView = findViewById(R.id.header_title)
         header.text = "Рецепты"
 
+        val backButton: ImageView = findViewById(R.id.back)
+        backButton.setOnClickListener {
+            finish()
+        }
+
         val iconRecipes = findViewById<ImageView>(R.id.iconRecipes)
         iconRecipes.setImageResource(R.drawable.recipes_active)
         // Get the Recipe object passed via intent (assuming it's passed from another activity)
