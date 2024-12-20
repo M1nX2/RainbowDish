@@ -709,7 +709,7 @@
                         android:layout_marginStart="5dp"
                         android:text="Шаг 1:"
                         android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
+                        android:textSize="@dimen/fontsize_body_large" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -725,10 +725,10 @@
                         android:id="@+id/sd34675fgh"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
+                        android:layout_marginStart="7dp"
                         android:text="Разомните банан вилкой, превратите его в однородную кашицу."
                         android:textColor="#5D6054"
-                        android:textSize="@dimen/fontsize_body_medium" />
+                        android:textSize="@dimen/fontsize_body_large" />
                 </LinearLayout>
             </LinearLayout>
 <!--      типа шаг 1 кончился      -->
@@ -758,7 +758,7 @@
                         android:layout_marginStart="5dp"
                         android:text="Шаг 1:"
                         android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_medium" />
+                        android:textSize="@dimen/fontsize_body_large" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -777,7 +777,7 @@
                         android:layout_marginStart="5dp"
                         android:text="Разомните банан вилкой, превратите его в однородную кашицу."
                         android:textColor="#5D6054"
-                        android:textSize="@dimen/fontsize_body_medium" />
+                        android:textSize="@dimen/fontsize_body_large" />
                 </LinearLayout>
             </LinearLayout>
             <!--      типа шаг 2 конч      -->
