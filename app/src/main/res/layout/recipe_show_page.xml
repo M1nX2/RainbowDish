@@ -709,7 +709,7 @@
                         android:layout_marginStart="5dp"
                         android:text="Шаг 1:"
                         android:textColor="#1A1C15"
-                        android:textSize="@dimen/fontsize_body_large" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -728,7 +728,7 @@
                         android:layout_marginStart="7dp"
                         android:text="Разомните банан вилкой, превратите его в однородную кашицу."
                         android:textColor="#5D6054"
-                        android:textSize="@dimen/fontsize_body_large" />
+                        android:textSize="16sp" />
                 </LinearLayout>
             </LinearLayout>
 <!--      типа шаг 1 кончился      -->

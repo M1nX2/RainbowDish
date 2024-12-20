@@ -217,23 +217,29 @@ class RecipeShowPage : AppCompatActivity() {
         if (recipeSteps.isNotEmpty()) {
             // Функция для создания карточки шага
             fun createStepCard(stepNumber: Int, stepDescription: String): LinearLayout {
+                // Корневой вертикальный LinearLayout
                 val stepLayout = LinearLayout(this).apply {
                     orientation = LinearLayout.VERTICAL
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     ).apply {
-                        setMargins(20, 10, 20, 10) // Отступы между шагами
+                        marginStart = 20
+                        marginEnd = 20
+                        bottomMargin = 20 // Нижний отступ
                     }
+                    clipChildren = false
+                    clipToPadding = false
                 }
 
-                // Горизонтальный контейнер для номера шага и изображения
+                // Вложенный горизонтальный LinearLayout
                 val headerLayout = LinearLayout(this).apply {
                     orientation = LinearLayout.HORIZONTAL
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     )
+                    gravity = Gravity.CENTER_VERTICAL // Выравнивание по вертикали
                 }
 
                 // Иконка шага
@@ -241,26 +247,33 @@ class RecipeShowPage : AppCompatActivity() {
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
-                    )
-                    setImageResource(R.drawable.eclipse_step) // Замените на свой ресурс
+                    ).apply {
+                        gravity = Gravity.CENTER_VERTICAL // Выравнивание для самой иконки
+                    }
+                    setImageResource(R.drawable.eclipse_step) // Ваш ресурс изображения
                 }
                 headerLayout.addView(stepIcon)
 
-                // Номер шага
+                // Текст "Шаг N:"
                 val stepNumberText = TextView(this).apply {
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.WRAP_CONTENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     ).apply {
-                        marginStart = 10 // Отступ от иконки
+                        marginStart = (TypedValue.applyDimension(
+                            TypedValue.COMPLEX_UNIT_DIP,
+                            5f, // Задаем 5dp
+                            resources.displayMetrics
+                        )).toInt()
+                        gravity = Gravity.CENTER_VERTICAL // Выравнивание текста
                     }
                     text = "Шаг $stepNumber:"
-                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 14f) // Размер текста
+                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
                     setTextColor(Color.parseColor("#1A1C15"))
                 }
                 headerLayout.addView(stepNumberText)
 
-                // Добавляем заголовок шага в макет
+                // Добавляем headerLayout в корневой макет
                 stepLayout.addView(headerLayout)
 
                 // Текст описания шага
@@ -269,16 +282,20 @@ class RecipeShowPage : AppCompatActivity() {
                         LinearLayout.LayoutParams.MATCH_PARENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     ).apply {
-                        setMargins(30, 5, 10, 10) // Отступы вокруг текста
+                        marginStart = 45
+                        marginEnd = 10
+                        topMargin = 5
+                        bottomMargin = 10
                     }
                     text = stepDescription.trim()
-                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 12f) // Компактный размер текста
+                    setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
                     setTextColor(Color.parseColor("#5D6054"))
                 }
                 stepLayout.addView(stepDescriptionText)
 
                 return stepLayout
             }
+
 
             // Добавляем шаги в контейнер
             recipeSteps.forEachIndexed { index, step ->

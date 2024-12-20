@@ -131,8 +131,10 @@ class ProductAdd : AppCompatActivity() {
                         quantity
                     }
 
+                    val finalQuantityInt = finalQuantity.roundToInt();
+
                     val textView3 = findViewById<TextView>(R.id.textView3)
-                    textView3.setText("≈ "+ finalQuantity + "гр")
+                    textView3.setText("≈ ${finalQuantityInt} гр")
                     // Отображаем finalQuantity (например, в другом TextView)
                     // Например:
                     // someTextView.text = "Вес: $finalQuantity"
@@ -162,17 +164,24 @@ class ProductAdd : AppCompatActivity() {
 
                     // Получаем текущее количество из EditText
                     val quantityText = quantityEditText.text.toString()
-                    val quantity = quantityText.toDoubleOrNull() ?: 0.0
-
+                    var quantity = quantityText.toDoubleOrNull() ?: 0.0
+                    if (selectedUnit == "Граммы")
+                    {
+                        quantity = 100.0
+                        quantityEditText.setText(quantity.roundToInt().toString())
+                    }
                     // Пересчитываем finalQuantity
                     finalQuantity = if (selectedUnit == "Штуки" && product.avgWeight != null) {
+                        quantity = 1.0
+                        quantityEditText.setText(quantity.roundToInt().toString())
+
                         quantity * product.avgWeight!!
                     } else {
                         quantity
                     }
 
                     val textView3 = findViewById<TextView>(R.id.textView3)
-                    textView3.setText("≈ "+ finalQuantity + "гр")
+                    textView3.setText("≈ ${finalQuantity.roundToInt()} гр")
 
                     // Отображаем finalQuantity (например, в другом TextView)
                     // someTextView.text = "Вес: $finalQuantity"
