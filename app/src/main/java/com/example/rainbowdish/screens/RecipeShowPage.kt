@@ -60,7 +60,7 @@ class RecipeShowPage : AppCompatActivity() {
         vesTextView.text =
             "${recipe.weight.roundToInt()} г"  // Assuming "weight" is the amount, update if needed
         timeTextView.text = "${recipe.timeR ?: "Не указано"}"
-
+        findViewById<TextView>(R.id.product_name).text = recipe.nameR
         // Load the image if it's available (using Glide or any image loading library)
         if (recipe.recipeIMG != null) {
             // Assuming recipeIMG contains a drawable resource name (not a full URL)
@@ -100,7 +100,6 @@ class RecipeShowPage : AppCompatActivity() {
         for (recipeProduct in recipeProducts) {
             // Fetch the Product object for the current RecipeProduct
             val product = databaseDAO.getProductById(recipeProduct.productId)
-
             // Calculate the total nutritional values by multiplying the product's nutritional values by the quantity
             if (product != null) {
                 val quantity = recipeProduct.quantity / 100
@@ -125,6 +124,7 @@ class RecipeShowPage : AppCompatActivity() {
                 totalF += product.f * quantity
             }
         }
+
         findViewById<TextView>(R.id.VitA).text = "A: ${"%.1f".format(totalVitA)} мкг"
         findViewById<TextView>(R.id.VitB1).text = "B1: ${"%.1f".format(totalVitB1)} мг"
         findViewById<TextView>(R.id.VitB2).text = "B2: ${"%.1f".format(totalVitB2)} мг"
